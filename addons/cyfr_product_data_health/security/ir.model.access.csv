@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_health_policy_user,health.policy.user,model_cyfr_product_health_policy,base.group_user,1,0,0,0
+access_health_policy_manager,health.policy.manager,model_cyfr_product_health_policy,product.group_product_manager,1,1,1,1
+access_health_scan_user,health.scan.user,model_cyfr_product_health_scan,base.group_user,1,0,0,0
+access_health_scan_manager,health.scan.manager,model_cyfr_product_health_scan,product.group_product_manager,1,0,1,0
+access_health_issue_user,health.issue.user,model_cyfr_product_health_issue,base.group_user,1,0,0,0
+access_health_issue_manager,health.issue.manager,model_cyfr_product_health_issue,product.group_product_manager,1,0,0,0

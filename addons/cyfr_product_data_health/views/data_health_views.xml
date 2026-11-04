@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_health_policy_list" model="ir.ui.view">
+        <field name="name">cyfr.product.health.policy.list</field>
+        <field name="model">cyfr.product.health.policy</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="company_id"/>
+                <field name="categ_id"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_health_policy_form" model="ir.ui.view">
+        <field name="name">cyfr.product.health.policy.form</field>
+        <field name="model">cyfr.product.health.policy</field>
+        <field name="arch" type="xml">
+            <form string="Product Data Policy">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="active"/>
+                        <field name="company_id"/>
+                        <field name="categ_id"/>
+                    </group>
+                    <group string="Checks">
+                        <field name="check_internal_reference"/>
+                        <field name="check_barcode"/>
+                        <field name="check_sale_price"/>
+                        <field name="check_category"/>
+                        <field name="check_image"/>
+                        <field name="generic_category_ids" widget="many2many_tags" invisible="not check_category"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_product_health_policy" model="ir.actions.act_window">
+        <field name="name">Policies</field>
+        <field name="res_model">cyfr.product.health.policy</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_health_scan_list" model="ir.ui.view">
+        <field name="name">cyfr.product.health.scan.list</field>
+        <field name="model">cyfr.product.health.scan</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="company_id"/>
+                <field name="state"/>
+                <field name="processed_count"/>
+                <field name="total_count"/>
+                <field name="issue_count"/>
+                <field name="completed_at"/>
+                <field name="is_current"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_health_scan_form" model="ir.ui.view">
+        <field name="name">cyfr.product.health.scan.form</field>
+        <field name="model">cyfr.product.health.scan</field>
+        <field name="arch" type="xml">
+            <form string="Product Data Scan" create="1" edit="0">
+                <header>
+                    <button name="action_scan_batch" string="Scan next 200 products" type="object" class="btn-primary" invisible="state == 'done'" groups="product.group_product_manager"/>
+                    <button name="action_open_issues" string="View issues" type="object" invisible="state == 'draft'"/>
+                    <button name="action_delete_old_scan" string="Delete old scan" type="object" invisible="state != 'done' or is_current" groups="product.group_product_manager" confirm="Delete this completed scan and its issue history?"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,running,done"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="company_id" options="{'no_create': True}" readonly="state != 'draft'"/>
+                        <field name="user_id"/>
+                        <field name="started_at"/>
+                        <field name="completed_at"/>
+                        <field name="is_current"/>
+                    </group>
+                    <group string="Progress">
+                        <field name="processed_count"/>
+                        <field name="total_count"/>
+                        <field name="issue_count"/>
+                    </group>
+                    <field name="issue_ids" readonly="1">
+                        <list>
+                            <field name="product_id"/>
+                            <field name="issue_codes"/>
+                            <field name="policy_id"/>
+                        </list>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_product_health_scan" model="ir.actions.act_window">
+        <field name="name">Scans</field>
+        <field name="res_model">cyfr.product.health.scan</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_health_issue_list" model="ir.ui.view">
+        <field name="name">cyfr.product.health.issue.list</field>
+        <field name="model">cyfr.product.health.issue</field>
+        <field name="arch" type="xml">
+            <list create="0" edit="0" delete="0">
+                <field name="product_id"/>
+                <field name="categ_id"/>
+                <field name="company_id"/>
+                <field name="issue_codes"/>
+                <field name="issue_summary"/>
+                <field name="policy_id"/>
+                <field name="scanned_at"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_health_issue_search" model="ir.ui.view">
+        <field name="name">cyfr.product.health.issue.search</field>
+        <field name="model">cyfr.product.health.issue</field>
+        <field name="arch" type="xml">
+            <search string="Product Data Issues">
+                <field name="product_id"/>
+                <field name="categ_id"/>
+                <field name="company_id"/>
+                <field name="issue_codes"/>
+                <filter name="current" string="Current" domain="[('is_current', '=', True)]"/>
+                <group>
+                    <filter name="group_company" string="Company" context="{'group_by': 'company_id'}"/>
+                    <filter name="group_category" string="Category" context="{'group_by': 'categ_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+    <record id="view_health_issue_form" model="ir.ui.view">
+        <field name="name">cyfr.product.health.issue.form</field>
+        <field name="model">cyfr.product.health.issue</field>
+        <field name="arch" type="xml">
+            <form create="0" edit="0" delete="0">
+                <header>
+                    <button name="action_open_product" string="Open Product" type="object" class="btn-primary"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="product_id"/>
+                        <field name="categ_id"/>
+                        <field name="company_id"/>
+                        <field name="issue_codes"/>
+                        <field name="issue_summary"/>
+                        <field name="policy_id"/>
+                        <field name="scan_id"/>
+                        <field name="scanned_at"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_product_health_issue" model="ir.actions.act_window">
+        <field name="name">Current Issues</field>
+        <field name="res_model">cyfr.product.health.issue</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_health_issue_search"/>
+        <field name="domain">[('is_current', '=', True)]</field>
+    </record>
+
+    <menuitem id="menu_product_health_root" name="Data Health" sequence="70" groups="base.group_user"/>
+    <menuitem id="menu_product_health_issues" name="Current Issues" parent="menu_product_health_root" action="action_product_health_issue" sequence="10"/>
+    <menuitem id="menu_product_health_scans" name="Scans" parent="menu_product_health_root" action="action_product_health_scan" sequence="20" groups="product.group_product_manager"/>
+    <menuitem id="menu_product_health_policies" name="Policies" parent="menu_product_health_root" action="action_product_health_policy" sequence="30" groups="product.group_product_manager"/>
+</odoo>

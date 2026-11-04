@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="policy_default" model="cyfr.product.health.policy">
+        <field name="name">Default product data policy</field>
+        <field name="check_internal_reference">1</field>
+        <field name="check_barcode">1</field>
+        <field name="check_sale_price">1</field>
+        <field name="check_category">1</field>
+        <field name="check_image">1</field>
+    </record>
+</odoo>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="demo_product_complete" model="product.template">
+        <field name="name">Demo Health Icon Product</field>
+        <field name="default_code">CYFR-DEMO-MUG</field>
+        <field name="barcode">5901234123457</field>
+        <field name="list_price">24.90</field>
+        <field name="categ_id" ref="product.product_category_goods"/>
+        <field name="image_1920" type="base64" file="cyfr_product_data_health/static/description/icon.png"/>
+    </record>
+    <record id="demo_finish_attribute" model="product.attribute">
+        <field name="name">Demo Health Finish</field>
+        <field name="create_variant">always</field>
+    </record>
+    <record id="demo_finish_matte" model="product.attribute.value">
+        <field name="name">Matte</field>
+        <field name="attribute_id" ref="demo_finish_attribute"/>
+    </record>
+    <record id="demo_finish_gloss" model="product.attribute.value">
+        <field name="name">Gloss</field>
+        <field name="attribute_id" ref="demo_finish_attribute"/>
+    </record>
+    <record id="demo_product_missing_identifiers" model="product.template">
+        <field name="name">Demo Variant Sample</field>
+        <field name="list_price">19.00</field>
+        <field name="categ_id" ref="product.product_category_goods"/>
+        <field name="attribute_line_ids" eval="[(0, 0, {'attribute_id': ref('demo_finish_attribute'), 'value_ids': [(6, 0, [ref('demo_finish_matte'), ref('demo_finish_gloss')])]})]"/>
+    </record>
+    <record id="demo_product_zero_price" model="product.template">
+        <field name="name">Demo Price Pending</field>
+        <field name="default_code">CYFR-DEMO-PENDING</field>
+        <field name="list_price">0</field>
+        <field name="categ_id" ref="product.product_category_goods"/>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+    <record id="demo_generic_category" model="product.category">
+        <field name="name">Demo Placeholder Category</field>
+    </record>
+    <record id="demo_generic_policy" model="cyfr.product.health.policy">
+        <field name="name">Demo placeholder category policy</field>
+        <field name="categ_id" ref="demo_generic_category"/>
+        <field name="generic_category_ids" eval="[(4, ref('demo_generic_category'))]"/>
+    </record>
+    <record id="demo_product_generic_category" model="product.template">
+        <field name="name">Demo Uncategorized Import</field>
+        <field name="list_price">12.00</field>
+        <field name="categ_id" ref="demo_generic_category"/>
+    </record>
+</odoo>

@@ -1,0 +1,469 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* cyfr_product_data_health
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cyfr_product_data_health 19.0.1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-04 22:44+0000\n"
+"PO-Revision-Date: 2026-11-04 22:44+0000\n"
+"Last-Translator: \n"
+"Language-Team: Polish\n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.constraint,message:cyfr_product_data_health.constraint_cyfr_product_health_issue_scan_product_uniq
+msgid "A product may appear only once in a scan."
+msgstr "Produkt może wystąpić w skanie tylko raz."
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_policy__active
+msgid "Active"
+msgstr "Aktywne"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_policy__categ_id
+msgid "Applies to Category"
+msgstr "Dotyczy kategorii"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_policy__generic_category_ids
+msgid "Categories Considered Generic"
+msgstr "Kategorie uznawane za ogólne"
+
+#. module: cyfr_product_data_health
+#: model_terms:ir.ui.view,arch_db:cyfr_product_data_health.view_health_issue_search
+msgid "Category"
+msgstr "Kategoria"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_policy__check_barcode
+msgid "Check Barcode"
+msgstr "Sprawdzaj kod kreskowy"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_policy__check_category
+msgid "Check Category"
+msgstr "Sprawdzaj kategorię"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_policy__check_image
+msgid "Check Image"
+msgstr "Sprawdzaj zdjęcie"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_policy__check_internal_reference
+msgid "Check Internal Reference"
+msgstr "Sprawdzaj indeks wewnętrzny"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_policy__check_sale_price
+msgid "Check Sale Price"
+msgstr "Sprawdzaj cenę sprzedaży"
+
+#. module: cyfr_product_data_health
+#: model_terms:ir.ui.view,arch_db:cyfr_product_data_health.view_health_policy_form
+msgid "Checks"
+msgstr "Kontrole"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_issue__company_id
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_policy__company_id
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_scan__company_id
+#: model_terms:ir.ui.view,arch_db:cyfr_product_data_health.view_health_issue_search
+msgid "Company"
+msgstr "Firma"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields.selection,name:cyfr_product_data_health.selection__cyfr_product_health_scan__state__done
+msgid "Complete"
+msgstr "Ukończony"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_issue__scanned_at
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_scan__completed_at
+msgid "Completed At"
+msgstr "Ukończono"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_issue__create_uid
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_policy__create_uid
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_scan__create_uid
+msgid "Created by"
+msgstr "Utworzył"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_issue__create_date
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_policy__create_date
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_scan__create_date
+msgid "Created on"
+msgstr "Utworzono"
+
+#. module: cyfr_product_data_health
+#: model_terms:ir.ui.view,arch_db:cyfr_product_data_health.view_health_issue_search
+msgid "Current"
+msgstr "Bieżący"
+
+#. module: cyfr_product_data_health
+#: model:ir.actions.act_window,name:cyfr_product_data_health.action_product_health_issue
+#: model:ir.ui.menu,name:cyfr_product_data_health.menu_product_health_issues
+msgid "Current Issues"
+msgstr "Bieżące braki"
+
+#. module: cyfr_product_data_health
+#: model:ir.ui.menu,name:cyfr_product_data_health.menu_product_health_root
+msgid "Data Health"
+msgstr "Jakość danych"
+
+#. module: cyfr_product_data_health
+#: model:cyfr.product.health.policy,name:cyfr_product_data_health.policy_default
+msgid "Default product data policy"
+msgstr "Domyślna reguła danych produktu"
+
+#. module: cyfr_product_data_health
+#: model_terms:ir.ui.view,arch_db:cyfr_product_data_health.view_health_scan_form
+msgid "Delete old scan"
+msgstr "Usuń stary skan"
+
+#. module: cyfr_product_data_health
+#: model_terms:ir.ui.view,arch_db:cyfr_product_data_health.view_health_scan_form
+msgid "Delete this completed scan and its issue history?"
+msgstr "Usunąć ukończony skan i historię jego braków?"
+
+#. module: cyfr_product_data_health
+#: model:product.attribute,name:cyfr_product_data_health.demo_finish_attribute
+msgid "Demo Health Finish"
+msgstr "Demonstracja: wykończenie"
+
+#. module: cyfr_product_data_health
+#: model:product.template,name:cyfr_product_data_health.demo_product_complete
+msgid "Demo Health Icon Product"
+msgstr "Demonstracja: produkt ze zdjęciem"
+
+#. module: cyfr_product_data_health
+#: model:product.template,name:cyfr_product_data_health.demo_product_zero_price
+msgid "Demo Price Pending"
+msgstr "Demonstracja: cena do uzupełnienia"
+
+#. module: cyfr_product_data_health
+#: model:product.template,name:cyfr_product_data_health.demo_product_generic_category
+msgid "Demo Uncategorized Import"
+msgstr "Demonstracja: produkt z kategorią zastępczą"
+
+#. module: cyfr_product_data_health
+#: model:product.template,name:cyfr_product_data_health.demo_product_missing_identifiers
+msgid "Demo Variant Sample"
+msgstr "Demonstracja: wariant produktu"
+
+#. module: cyfr_product_data_health
+#: model:cyfr.product.health.policy,name:cyfr_product_data_health.demo_generic_policy
+msgid "Demo placeholder category policy"
+msgstr "Demonstracja: reguła kategorii zastępczej"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_issue__display_name
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_policy__display_name
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_scan__display_name
+msgid "Display Name"
+msgstr "Nazwa wyświetlana"
+
+#. module: cyfr_product_data_health
+#. odoo-python
+#: code:addons/cyfr_product_data_health/models/product_health.py:0
+msgid "Generic or missing category"
+msgstr "Kategoria zastępcza lub brak kategorii"
+
+#. module: cyfr_product_data_health
+#: model:product.attribute.value,name:cyfr_product_data_health.demo_finish_gloss
+msgid "Gloss"
+msgstr "Połysk"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_issue__id
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_policy__id
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_scan__id
+msgid "ID"
+msgstr "ID"
+
+#. module: cyfr_product_data_health
+#. odoo-python
+#: code:addons/cyfr_product_data_health/models/product_health.py:0
+msgid "Invalid product health issue codes."
+msgstr "Nieprawidłowe kody braków danych produktu."
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_issue__is_current
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_scan__is_current
+msgid "Is Current"
+msgstr "Jest bieżący"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_scan__issue_ids
+msgid "Issue"
+msgstr "Brak"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_issue__issue_codes
+msgid "Issue Codes"
+msgstr "Kody braków"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_scan__issue_count
+msgid "Issue Count"
+msgstr "Liczba braków"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_issue__issue_summary
+msgid "Issues"
+msgstr "Braki"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_scan__last_product_id
+msgid "Last Product"
+msgstr "Ostatni produkt"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_issue__write_uid
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_policy__write_uid
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_scan__write_uid
+msgid "Last Updated by"
+msgstr "Ostatnio zmienił"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_issue__write_date
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_policy__write_date
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_scan__write_date
+msgid "Last Updated on"
+msgstr "Ostatnio zmieniono"
+
+#. module: cyfr_product_data_health
+#: model:product.attribute.value,name:cyfr_product_data_health.demo_finish_matte
+msgid "Matte"
+msgstr "Mat"
+
+#. module: cyfr_product_data_health
+#. odoo-python
+#: code:addons/cyfr_product_data_health/models/product_health.py:0
+msgid "Missing barcode"
+msgstr "Brak kodu kreskowego"
+
+#. module: cyfr_product_data_health
+#. odoo-python
+#: code:addons/cyfr_product_data_health/models/product_health.py:0
+msgid "Missing image"
+msgstr "Brak zdjęcia"
+
+#. module: cyfr_product_data_health
+#. odoo-python
+#: code:addons/cyfr_product_data_health/models/product_health.py:0
+msgid "Missing internal reference"
+msgstr "Brak indeksu wewnętrznego"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_policy__name
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_scan__name
+msgid "Name"
+msgstr "Nazwa"
+
+#. module: cyfr_product_data_health
+#. odoo-python
+#: code:addons/cyfr_product_data_health/models/product_health.py:0
+msgid "New scan"
+msgstr "Nowy skan"
+
+#. module: cyfr_product_data_health
+#. odoo-python
+#: code:addons/cyfr_product_data_health/models/product_health.py:0
+msgid "Non-positive sale price"
+msgstr "Cena sprzedaży nie jest dodatnia"
+
+#. module: cyfr_product_data_health
+#. odoo-python
+#: code:addons/cyfr_product_data_health/models/product_health.py:0
+msgid "Only a completed, non-current scan can be deleted."
+msgstr "Można usunąć tylko ukończony skan, który nie jest bieżący."
+
+#. module: cyfr_product_data_health
+#. odoo-python
+#: code:addons/cyfr_product_data_health/models/product_health.py:0
+msgid "Only a product manager may create data health scans."
+msgstr "Tylko menedżer produktów może tworzyć skany danych."
+
+#. module: cyfr_product_data_health
+#. odoo-python
+#: code:addons/cyfr_product_data_health/models/product_health.py:0
+msgid "Only a product manager may run data health scans."
+msgstr "Tylko menedżer produktów może uruchamiać skan danych."
+
+#. module: cyfr_product_data_health
+#. odoo-python
+#: code:addons/cyfr_product_data_health/models/product_health.py:0
+msgid "Only one active policy is allowed for each company/category scope."
+msgstr ""
+"Dla każdej firmy i kategorii może obowiązywać tylko jedna aktywna reguła."
+
+#. module: cyfr_product_data_health
+#: model_terms:ir.ui.view,arch_db:cyfr_product_data_health.view_health_issue_form
+msgid "Open Product"
+msgstr "Otwórz produkt"
+
+#. module: cyfr_product_data_health
+#: model:ir.actions.act_window,name:cyfr_product_data_health.action_product_health_policy
+#: model:ir.ui.menu,name:cyfr_product_data_health.menu_product_health_policies
+msgid "Policies"
+msgstr "Reguły"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_issue__policy_id
+msgid "Policy"
+msgstr "Reguła"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_scan__processed_count
+msgid "Processed Count"
+msgstr "Liczba sprawdzonych"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_issue__product_id
+msgid "Product"
+msgstr "Produkt"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_issue__categ_id
+msgid "Product Category"
+msgstr "Kategoria produktu"
+
+#. module: cyfr_product_data_health
+#: model:ir.model,name:cyfr_product_data_health.model_cyfr_product_health_issue
+msgid "Product Data Health Issue"
+msgstr "Brak danych produktu"
+
+#. module: cyfr_product_data_health
+#: model:ir.model,name:cyfr_product_data_health.model_cyfr_product_health_policy
+msgid "Product Data Health Policy"
+msgstr "Reguła jakości danych produktu"
+
+#. module: cyfr_product_data_health
+#: model:ir.model,name:cyfr_product_data_health.model_cyfr_product_health_scan
+msgid "Product Data Health Scan"
+msgstr "Skan jakości danych produktu"
+
+#. module: cyfr_product_data_health
+#: model_terms:ir.ui.view,arch_db:cyfr_product_data_health.view_health_issue_search
+msgid "Product Data Issues"
+msgstr "Braki danych produktu"
+
+#. module: cyfr_product_data_health
+#: model_terms:ir.ui.view,arch_db:cyfr_product_data_health.view_health_policy_form
+msgid "Product Data Policy"
+msgstr "Reguła danych produktu"
+
+#. module: cyfr_product_data_health
+#: model_terms:ir.ui.view,arch_db:cyfr_product_data_health.view_health_scan_form
+msgid "Product Data Scan"
+msgstr "Skan danych produktów"
+
+#. module: cyfr_product_data_health
+#. odoo-python
+#: code:addons/cyfr_product_data_health/models/product_health.py:0
+msgid "Product scan %(company)s — %(time)s"
+msgstr "Skan produktów %(company)s — %(time)s"
+
+#. module: cyfr_product_data_health
+#: model_terms:ir.ui.view,arch_db:cyfr_product_data_health.view_health_scan_form
+msgid "Progress"
+msgstr "Postęp"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields.selection,name:cyfr_product_data_health.selection__cyfr_product_health_scan__state__draft
+msgid "Ready"
+msgstr "Gotowy"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields.selection,name:cyfr_product_data_health.selection__cyfr_product_health_scan__state__running
+msgid "Running"
+msgstr "W toku"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_issue__scan_id
+msgid "Scan"
+msgstr "Skan"
+
+#. module: cyfr_product_data_health
+#: model_terms:ir.ui.view,arch_db:cyfr_product_data_health.view_health_scan_form
+msgid "Scan next 200 products"
+msgstr "Skanuj następne 200 produktów"
+
+#. module: cyfr_product_data_health
+#. odoo-python
+#: code:addons/cyfr_product_data_health/models/product_health.py:0
+msgid "Scan state and ownership are assigned by the module."
+msgstr "Stan i właściciel skanu są ustalane przez moduł."
+
+#. module: cyfr_product_data_health
+#: model:ir.actions.act_window,name:cyfr_product_data_health.action_product_health_scan
+#: model:ir.ui.menu,name:cyfr_product_data_health.menu_product_health_scans
+msgid "Scans"
+msgstr "Skany"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,help:cyfr_product_data_health.field_cyfr_product_health_policy__generic_category_ids
+msgid ""
+"Select placeholder categories to flag. An empty selection flags only "
+"products with no category."
+msgstr ""
+"Wybierz kategorie zastępcze do oznaczenia. Pusty wybór oznacza tylko "
+"produkty bez kategorii."
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,help:cyfr_product_data_health.field_cyfr_product_health_issue__issue_codes
+msgid "Stable comma-separated issue codes for CSV export."
+msgstr "Stałe kody braków rozdzielone przecinkami do eksportu CSV."
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_scan__started_at
+msgid "Started At"
+msgstr "Rozpoczęto"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_scan__state
+msgid "State"
+msgstr "Stan"
+
+#. module: cyfr_product_data_health
+#. odoo-python
+#: code:addons/cyfr_product_data_health/models/product_health.py:0
+msgid "The linked product is not readable."
+msgstr "Powiązany produkt nie jest dostępny do odczytu."
+
+#. module: cyfr_product_data_health
+#. odoo-python
+#: code:addons/cyfr_product_data_health/models/product_health.py:0
+msgid "The scan company must be one of your active companies."
+msgstr "Firma skanu musi należeć do aktywnych firm użytkownika."
+
+#. module: cyfr_product_data_health
+#. odoo-python
+#: code:addons/cyfr_product_data_health/models/product_health.py:0
+msgid "This scan is complete. Create a new scan to refresh results."
+msgstr "Skan jest ukończony. Utwórz nowy skan, aby odświeżyć wyniki."
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_scan__total_count
+msgid "Total Count"
+msgstr "Łączna liczba"
+
+#. module: cyfr_product_data_health
+#: model:ir.model.fields,field_description:cyfr_product_data_health.field_cyfr_product_health_scan__user_id
+msgid "User"
+msgstr "Użytkownik"
+
+#. module: cyfr_product_data_health
+#: model_terms:ir.ui.view,arch_db:cyfr_product_data_health.view_health_scan_form
+msgid "View issues"
+msgstr "Pokaż braki"

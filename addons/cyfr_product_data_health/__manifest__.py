@@ -1,0 +1,20 @@
+{
+    "name": "Product Data Health",
+    "summary": "Find missing product identifiers, prices, categories and images",
+    "version": "19.0.1.0.0",
+    "category": "Productivity",
+    "author": "Cyfr Sp. z o.o.",
+    "website": "https://digicyfr.com",
+    "license": "LGPL-3",
+    "depends": ["product"],
+    "data": [
+        "security/ir.model.access.csv",
+        "security/rules.xml",
+        "data/default_policy.xml",
+        "views/data_health_views.xml",
+    ],
+    "demo": ["demo/product_health_demo.xml"],
+    "application": True,
+    "installable": True,
+    "auto_install": False,
+}
