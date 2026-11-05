@@ -1,5 +1,23 @@
 # Digicyfr free Odoo 19 add-ons
 
+> **Repository moved:** Each addon now has its own public repository, release, and
+> protected exact-version branch. This combined repository remains available for
+> historical source and release provenance. Use the standalone repositories for
+> new installations and issues.
+
+| Addon | Current repository |
+| --- | --- |
+| `cyfr_product_data_health` | [digicyfr/odoo-addon-cyfr-product-data-health](https://github.com/digicyfr/odoo-addon-cyfr-product-data-health) |
+| `cyfr_pos_tax_audit` | [digicyfr/odoo-addon-cyfr-pos-tax-audit](https://github.com/digicyfr/odoo-addon-cyfr-pos-tax-audit) |
+| `cyfr_crm_next_step` | [digicyfr/odoo-addon-cyfr-crm-next-step](https://github.com/digicyfr/odoo-addon-cyfr-crm-next-step) |
+| `cyfr_stock_exception_queue` | [digicyfr/odoo-addon-cyfr-stock-exception-queue](https://github.com/digicyfr/odoo-addon-cyfr-stock-exception-queue) |
+| `cyfr_purchase_receipt_delays` | [digicyfr/odoo-addon-cyfr-purchase-receipt-delays](https://github.com/digicyfr/odoo-addon-cyfr-purchase-receipt-delays) |
+| `cyfr_website_language_audit` | [digicyfr/odoo-addon-cyfr-website-language-audit](https://github.com/digicyfr/odoo-addon-cyfr-website-language-audit) |
+| `cyfr_pos_refund_evidence` | [digicyfr/odoo-addon-cyfr-pos-refund-evidence](https://github.com/digicyfr/odoo-addon-cyfr-pos-refund-evidence) |
+| `cyfr_quote_watchlist` | [digicyfr/odoo-addon-cyfr-quote-watchlist](https://github.com/digicyfr/odoo-addon-cyfr-quote-watchlist) |
+| `cyfr_lot_expiry_worklist` | [digicyfr/odoo-addon-cyfr-lot-expiry-worklist](https://github.com/digicyfr/odoo-addon-cyfr-lot-expiry-worklist) |
+| `cyfr_pos_shift_handover` | [digicyfr/odoo-addon-cyfr-pos-shift-handover](https://github.com/digicyfr/odoo-addon-cyfr-pos-shift-handover) |
+
 Original, independently installable Odoo 19 add-ons from Digicyfr. This public
 repository contains only free add-on source. Each module has its own LGPL-3
 license copy, English and Polish guides, demo data, and tests.
