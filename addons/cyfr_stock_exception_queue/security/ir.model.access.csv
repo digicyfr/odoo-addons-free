@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_exception_scope_user,exception.scope.user,model_cyfr_stock_exception_scope,stock.group_stock_user,1,0,0,0
+access_exception_scope_manager,exception.scope.manager,model_cyfr_stock_exception_scope,stock.group_stock_manager,1,1,1,1
+access_exception_row_user,exception.row.user,model_cyfr_stock_exception_row,stock.group_stock_user,1,0,0,0

@@ -1,0 +1,20 @@
+{
+    "name": "Stock Exception Queue",
+    "summary": "Scan warehouse stock for negative, below-minimum and persistent-zero availability",
+    "version": "19.0.1.0.0",
+    "category": "Inventory/Inventory",
+    "author": "Cyfr Sp. z o.o.",
+    "website": "https://www.digicyfr.com",
+    "license": "LGPL-3",
+    "depends": ["stock"],
+    "data": [
+        "security/ir.model.access.csv",
+        "security/rules.xml",
+        "views/exception_views.xml",
+        "data/cron.xml",
+    ],
+    "demo": ["demo/exception_demo.xml"],
+    "application": True,
+    "installable": True,
+    "auto_install": False,
+}

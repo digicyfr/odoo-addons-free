@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="rule_exception_scope_company" model="ir.rule">
+        <field name="name">Stock exception scopes in active companies</field>
+        <field name="model_id" ref="model_cyfr_stock_exception_scope"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+    </record>
+    <record id="rule_exception_row_company" model="ir.rule">
+        <field name="name">Stock exception rows in active companies</field>
+        <field name="model_id" ref="model_cyfr_stock_exception_row"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+    </record>
+</odoo>

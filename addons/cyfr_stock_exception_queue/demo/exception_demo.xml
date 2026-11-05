@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="demo_scope" model="cyfr.stock.exception.scope">
+        <field name="name">Demo warehouse stock</field>
+        <field name="company_id" ref="base.main_company"/>
+        <field name="warehouse_id" ref="stock.warehouse0"/>
+        <field name="location_id" ref="stock.stock_location_stock"/>
+        <field name="zero_days">1</field>
+    </record>
+    <record id="demo_location_shelf" model="stock.location">
+        <field name="name">Exception demo shelf</field>
+        <field name="location_id" ref="stock.stock_location_stock"/>
+        <field name="company_id" ref="base.main_company"/>
+        <field name="usage">internal</field>
+    </record>
+    <record id="demo_product_normal" model="product.product">
+        <field name="name">Exception demo normal item</field>
+        <field name="is_storable" eval="True"/>
+    </record>
+    <record id="demo_product_negative" model="product.product">
+        <field name="name">Exception demo negative item</field>
+        <field name="is_storable" eval="True"/>
+    </record>
+    <record id="demo_product_reserved" model="product.product">
+        <field name="name">Exception demo reserved item</field>
+        <field name="is_storable" eval="True"/>
+    </record>
+    <record id="demo_product_no_quant" model="product.product">
+        <field name="name">Exception demo zero item with reorder rule</field>
+        <field name="is_storable" eval="True"/>
+    </record>
+    <record id="demo_quant_normal" model="stock.quant">
+        <field name="product_id" ref="demo_product_normal"/>
+        <field name="location_id" ref="demo_location_shelf"/>
+        <field name="quantity">8</field>
+    </record>
+    <record id="demo_quant_negative" model="stock.quant">
+        <field name="product_id" ref="demo_product_negative"/>
+        <field name="location_id" ref="demo_location_shelf"/>
+        <field name="quantity">-2</field>
+    </record>
+    <record id="demo_quant_reserved" model="stock.quant">
+        <field name="product_id" ref="demo_product_reserved"/>
+        <field name="location_id" ref="demo_location_shelf"/>
+        <field name="quantity">6</field>
+        <field name="reserved_quantity">5</field>
+    </record>
+    <record id="demo_orderpoint_reserved" model="stock.warehouse.orderpoint">
+        <field name="warehouse_id" ref="stock.warehouse0"/>
+        <field name="location_id" ref="demo_location_shelf"/>
+        <field name="product_id" ref="demo_product_reserved"/>
+        <field name="product_min_qty">3</field>
+        <field name="product_max_qty">6</field>
+        <field name="trigger">manual</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+    <record id="demo_orderpoint_no_quant" model="stock.warehouse.orderpoint">
+        <field name="warehouse_id" ref="stock.warehouse0"/>
+        <field name="location_id" ref="demo_location_shelf"/>
+        <field name="product_id" ref="demo_product_no_quant"/>
+        <field name="product_min_qty">2</field>
+        <field name="product_max_qty">5</field>
+        <field name="trigger">manual</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+</odoo>

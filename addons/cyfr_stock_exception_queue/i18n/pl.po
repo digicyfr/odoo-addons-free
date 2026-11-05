@@ -1,0 +1,421 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* cyfr_stock_exception_queue
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0-20260908\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-05 01:49+0000\n"
+"PO-Revision-Date: 2026-11-05 02:00+0000\n"
+"Last-Translator: Cyfr\n"
+"Language-Team: Polish\n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+#. module: cyfr_stock_exception_queue
+#. odoo-python
+#: code:addons/cyfr_stock_exception_queue/models/exception_queue.py:0
+msgid "A linked stock record is not readable."
+msgstr "Powiązany rekord magazynowy nie jest dostępny do odczytu."
+
+#. module: cyfr_stock_exception_queue
+#. odoo-python
+#: code:addons/cyfr_stock_exception_queue/models/exception_queue.py:0
+msgid "A linked warehouse location is not readable."
+msgstr "Powiązana lokalizacja magazynowa nie jest dostępna do odczytu."
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.constraint,message:cyfr_stock_exception_queue.constraint_cyfr_stock_exception_row_scope_product_location_unique
+msgid "A product/location appears once per scan scope."
+msgstr "Para produkt/lokalizacja może wystąpić tylko raz w zakresie skanowania."
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.constraint,message:cyfr_stock_exception_queue.constraint_cyfr_stock_exception_scope_scope_unique
+msgid "A scan scope already exists for this warehouse location."
+msgstr "Zakres skanowania dla tej lokalizacji magazynowej już istnieje."
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_scope__active
+msgid "Active"
+msgstr "Aktywny"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields.selection,name:cyfr_stock_exception_queue.selection__cyfr_stock_exception_row__severity__below_min
+#: model_terms:ir.ui.view,arch_db:cyfr_stock_exception_queue.view_stock_exception_row_search
+msgid "Below Minimum"
+msgstr "Poniżej minimum"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_row__company_id
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_scope__company_id
+msgid "Company"
+msgstr "Firma"
+
+#. module: cyfr_stock_exception_queue
+#. odoo-python
+#: code:addons/cyfr_stock_exception_queue/models/exception_queue.py:0
+msgid "Create a new scope to change a location with scan history."
+msgstr "Aby zmienić lokalizację z historią skanowania, utwórz nowy zakres."
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_row__create_uid
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_scope__create_uid
+msgid "Created by"
+msgstr "Utworzone przez"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_row__create_date
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_scope__create_date
+msgid "Created on"
+msgstr "Utworzono"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_row__display_name
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_scope__display_name
+msgid "Display Name"
+msgstr "Nazwa wyświetlana"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_scope__exception_count
+msgid "Exception Count"
+msgstr "Liczba wyjątków"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.ui.menu,name:cyfr_stock_exception_queue.menu_stock_exception_rows
+msgid "Exception Queue"
+msgstr "Kolejka wyjątków"
+
+#. module: cyfr_stock_exception_queue
+#: model:product.template,name:cyfr_stock_exception_queue.demo_product_negative_product_template
+msgid "Exception demo negative item"
+msgstr "Przykład: ujemny stan wolny"
+
+#. module: cyfr_stock_exception_queue
+#: model:product.template,name:cyfr_stock_exception_queue.demo_product_normal_product_template
+msgid "Exception demo normal item"
+msgstr "Przykład: prawidłowy stan"
+
+#. module: cyfr_stock_exception_queue
+#: model:product.template,name:cyfr_stock_exception_queue.demo_product_reserved_product_template
+msgid "Exception demo reserved item"
+msgstr "Przykład: produkt z rezerwacją"
+
+#. module: cyfr_stock_exception_queue
+#: model:product.template,name:cyfr_stock_exception_queue.demo_product_no_quant_product_template
+msgid "Exception demo zero item with reorder rule"
+msgstr "Przykład: zero z regułą uzupełniania"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_row__first_zero_at
+msgid "First Zero At"
+msgstr "Pierwsze zero"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_row__free_qty
+msgid "Free Quantity"
+msgstr "Ilość wolna"
+
+#. module: cyfr_stock_exception_queue
+#: model_terms:ir.ui.view,arch_db:cyfr_stock_exception_queue.view_stock_exception_scope_form
+msgid ""
+"Free quantity is on hand minus reserved at each internal location. Scans "
+"exclude consigned stock and do not forecast incoming moves. A zero duration "
+"starts only when this module first observes zero in a scan."
+msgstr "Ilość wolna to stan minus rezerwacje w każdej lokalizacji wewnętrznej. Skan wyklucza towar powierzony i nie prognozuje dostaw. Czas z zerem liczy się dopiero od pierwszego skanu, w którym moduł zaobserwuje zero."
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_row__id
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_scope__id
+msgid "ID"
+msgstr "ID"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields.selection,name:cyfr_stock_exception_queue.selection__cyfr_stock_exception_scope__state__idle
+msgid "Idle"
+msgstr "Bezczynny"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_row__is_exception
+msgid "Is Exception"
+msgstr "Jest wyjątkiem"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_scope__last_error
+msgid "Last Error"
+msgstr "Ostatni błąd"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_row__last_scan_at
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_scope__last_scan_at
+msgid "Last Scan At"
+msgstr "Ostatni skan"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_scope__last_batch_at
+msgid "Last Batch At"
+msgstr "Ostatnia partia"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_row__write_uid
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_scope__write_uid
+msgid "Last Updated by"
+msgstr "Ostatnio zmienione przez"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_row__write_date
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_scope__write_date
+msgid "Last Updated on"
+msgstr "Ostatnio zmieniono"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_row__location_id
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_scope__location_id
+#: model_terms:ir.ui.view,arch_db:cyfr_stock_exception_queue.view_stock_exception_row_search
+msgid "Location"
+msgstr "Lokalizacja"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,help:cyfr_stock_exception_queue.field_cyfr_stock_exception_scope__zero_days
+msgid ""
+"Minimum elapsed whole days since the first module scan observed zero free "
+"quantity."
+msgstr "Minimalna liczba pełnych dni od pierwszego skanu, w którym moduł zaobserwował zerową ilość wolną."
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_scope__name
+msgid "Name"
+msgstr "Nazwa"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields.selection,name:cyfr_stock_exception_queue.selection__cyfr_stock_exception_row__severity__negative
+#: model_terms:ir.ui.view,arch_db:cyfr_stock_exception_queue.view_stock_exception_row_search
+msgid "Negative Free"
+msgstr "Ujemna ilość wolna"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields.selection,name:cyfr_stock_exception_queue.selection__cyfr_stock_exception_row__severity__normal
+msgid "Normal"
+msgstr "Prawidłowy"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_row__on_hand
+msgid "On Hand"
+msgstr "Stan"
+
+#. module: cyfr_stock_exception_queue
+#. odoo-python
+#: code:addons/cyfr_stock_exception_queue/models/exception_queue.py:0
+msgid "Only an inventory administrator may refresh stock exceptions."
+msgstr "Tylko administrator magazynu może odświeżać wyjątki magazynowe."
+
+#. module: cyfr_stock_exception_queue
+#. odoo-python
+#: code:addons/cyfr_stock_exception_queue/models/exception_queue.py:0
+msgid "Only the system scheduler may refresh every scan scope."
+msgstr "Tylko harmonogram systemowy może odświeżać wszystkie zakresy skanowania."
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_row__minimum_qty
+msgid "Orderpoint Minimum"
+msgstr "Minimum reguły uzupełniania"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields.selection,name:cyfr_stock_exception_queue.selection__cyfr_stock_exception_row__severity__persistent_zero
+#: model_terms:ir.ui.view,arch_db:cyfr_stock_exception_queue.view_stock_exception_row_search
+msgid "Persistent Zero"
+msgstr "Trwałe zero"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_row__product_id
+msgid "Product"
+msgstr "Produkt"
+
+#. module: cyfr_stock_exception_queue
+#. odoo-python
+#: code:addons/cyfr_stock_exception_queue/models/exception_queue.py:0
+#: model_terms:ir.ui.view,arch_db:cyfr_stock_exception_queue.view_stock_exception_row_form
+msgid "Replenishment Rules"
+msgstr "Reguły uzupełniania"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_row__reserved
+msgid "Reserved"
+msgstr "Zarezerwowano"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_scope__row_ids
+msgid "Row"
+msgstr "Wiersz"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_scope__scan_cursor
+msgid "Scan Cursor"
+msgstr "Pozycja skanowania"
+
+#. module: cyfr_stock_exception_queue
+#: model_terms:ir.ui.view,arch_db:cyfr_stock_exception_queue.view_stock_exception_scope_form
+msgid "Scan Next Batch"
+msgstr "Skanuj kolejną partię"
+
+#. module: cyfr_stock_exception_queue
+#: model_terms:ir.ui.view,arch_db:cyfr_stock_exception_queue.view_stock_exception_row_search
+msgid "Scan Scope"
+msgstr "Zakres skanowania"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.ui.menu,name:cyfr_stock_exception_queue.menu_stock_exception_scopes
+msgid "Scan Scopes"
+msgstr "Zakresy skanowania"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_scope__scan_started_at
+msgid "Scan Started At"
+msgstr "Początek skanowania"
+
+#. module: cyfr_stock_exception_queue
+#. odoo-python
+#: code:addons/cyfr_stock_exception_queue/models/exception_queue.py:0
+msgid "Scan progress is maintained by the module."
+msgstr "Postęp skanowania jest zarządzany przez moduł."
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,help:cyfr_stock_exception_queue.field_cyfr_stock_exception_scope__location_id
+msgid ""
+"Scan this internal location and its internal descendants in the warehouse."
+msgstr "Skanuj tę lokalizację wewnętrzną i jej wewnętrzne podlokalizacje w magazynie."
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields.selection,name:cyfr_stock_exception_queue.selection__cyfr_stock_exception_scope__state__running
+msgid "Scanning"
+msgstr "Skanowanie"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_row__scope_id
+msgid "Scope"
+msgstr "Zakres"
+
+#. module: cyfr_stock_exception_queue
+#: model_terms:ir.ui.view,arch_db:cyfr_stock_exception_queue.view_stock_exception_row_search
+msgid "Search Stock Exceptions"
+msgstr "Szukaj wyjątków magazynowych"
+
+#. module: cyfr_stock_exception_queue
+#. odoo-python
+#: code:addons/cyfr_stock_exception_queue/models/exception_queue.py:0
+msgid "Select a company-owned internal warehouse location."
+msgstr "Wybierz lokalizację wewnętrzną należącą do firmy."
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_row__severity
+msgid "Severity"
+msgstr "Waga"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_row__is_stale
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_scope__is_stale
+msgid "Stale Results"
+msgstr "Nieaktualne wyniki"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_scope__state
+msgid "State"
+msgstr "Stan"
+
+#. module: cyfr_stock_exception_queue
+#: model_terms:ir.ui.view,arch_db:cyfr_stock_exception_queue.view_stock_exception_row_form
+msgid "Stock Exception"
+msgstr "Wyjątek magazynowy"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model,name:cyfr_stock_exception_queue.model_cyfr_stock_exception_row
+msgid "Stock Exception Scan Result"
+msgstr "Wynik skanowania wyjątków magazynowych"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model,name:cyfr_stock_exception_queue.model_cyfr_stock_exception_scope
+msgid "Stock Exception Scan Scope"
+msgstr "Zakres skanowania wyjątków magazynowych"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.actions.act_window,name:cyfr_stock_exception_queue.action_stock_exception_row
+#: model:ir.ui.menu,name:cyfr_stock_exception_queue.menu_stock_exception_root
+#: model_terms:ir.ui.view,arch_db:cyfr_stock_exception_queue.view_stock_exception_row_list
+msgid "Stock Exceptions"
+msgstr "Wyjątki magazynowe"
+
+#. module: cyfr_stock_exception_queue
+#: model_terms:ir.ui.view,arch_db:cyfr_stock_exception_queue.view_stock_exception_scope_form
+msgid "Stock Scan Scope"
+msgstr "Zakres skanowania magazynu"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.actions.act_window,name:cyfr_stock_exception_queue.action_stock_exception_scope
+#: model_terms:ir.ui.view,arch_db:cyfr_stock_exception_queue.view_stock_exception_scope_list
+msgid "Stock Scan Scopes"
+msgstr "Zakresy skanowania magazynu"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.actions.server,name:cyfr_stock_exception_queue.cron_stock_exception_refresh_ir_actions_server
+msgid "Stock exception queue: refresh next scope batch"
+msgstr "Kolejka wyjątków magazynowych: odśwież następną partię zakresu"
+
+#. module: cyfr_stock_exception_queue
+#. odoo-python
+#: code:addons/cyfr_stock_exception_queue/models/exception_queue.py:0
+msgid "A scan scope may contain at most 50 active internal locations."
+msgstr "Zakres skanowania może obejmować najwyżej 50 aktywnych lokalizacji wewnętrznych."
+
+#. module: cyfr_stock_exception_queue
+#. odoo-python
+#: code:addons/cyfr_stock_exception_queue/models/exception_queue.py:0
+msgid "The location must be inside the selected warehouse."
+msgstr "Lokalizacja musi znajdować się w wybranym magazynie."
+
+#. module: cyfr_stock_exception_queue
+#. odoo-python
+#: code:addons/cyfr_stock_exception_queue/models/exception_queue.py:0
+msgid "The scan company must be active for your user."
+msgstr "Firma skanowania musi być aktywna dla użytkownika."
+
+#. module: cyfr_stock_exception_queue
+#. odoo-python
+#: code:addons/cyfr_stock_exception_queue/models/exception_queue.py:0
+msgid "The warehouse must belong to the scan company."
+msgstr "Magazyn musi należeć do firmy skanowania."
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_scope__warehouse_id
+msgid "Warehouse"
+msgstr "Magazyn"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_scope__zero_days
+msgid "Zero Days"
+msgstr "Dni z zerem"
+
+#. module: cyfr_stock_exception_queue
+#. odoo-python
+#: code:addons/cyfr_stock_exception_queue/models/exception_queue.py:0
+#: model:ir.model.constraint,message:cyfr_stock_exception_queue.constraint_cyfr_stock_exception_scope_zero_days_positive
+msgid "Zero days cannot be negative."
+msgstr "Liczba dni z zerem nie może być ujemna."
+
+#. module: cyfr_stock_exception_queue
+#. odoo-python
+#: code:addons/cyfr_stock_exception_queue/models/exception_queue.py:0
+msgid "company_id"
+msgstr "company_id"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,field_description:cyfr_stock_exception_queue.field_cyfr_stock_exception_row__is_persistent_zero
+msgid "Zero Persisted"
+msgstr "Zero utrzymuje się"
+
+#. module: cyfr_stock_exception_queue
+#: model:ir.model.fields,help:cyfr_stock_exception_queue.field_cyfr_stock_exception_row__is_persistent_zero
+msgid "Zero free quantity was observed on successive module scans for the configured duration."
+msgstr "Zerową ilość wolną zaobserwowano w kolejnych skanach modułu przez ustawiony czas."

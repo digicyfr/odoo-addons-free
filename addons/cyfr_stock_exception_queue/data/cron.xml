@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="cron_stock_exception_refresh" model="ir.cron">
+        <field name="name">Stock exception queue: refresh next scope batch</field>
+        <field name="model_id" ref="model_cyfr_stock_exception_scope"/>
+        <field name="state">code</field>
+        <field name="code">model.cron_refresh()</field>
+        <field name="interval_number">5</field>
+        <field name="interval_type">minutes</field>
+        <field name="active" eval="True"/>
+    </record>
+</odoo>

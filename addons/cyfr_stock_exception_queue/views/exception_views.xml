@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_stock_exception_scope_list" model="ir.ui.view">
+        <field name="name">cyfr.stock.exception.scope.list</field>
+        <field name="model">cyfr.stock.exception.scope</field>
+        <field name="arch" type="xml">
+            <list string="Stock Scan Scopes" sample="0">
+                <field name="name"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+                <field name="warehouse_id"/>
+                <field name="location_id"/>
+                <field name="zero_days"/>
+                <field name="exception_count"/>
+                <field name="state"/>
+                <field name="last_scan_at"/>
+                <field name="last_batch_at" optional="hide"/>
+                <field name="is_stale"/>
+                <field name="last_error" optional="hide"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_stock_exception_scope_form" model="ir.ui.view">
+        <field name="name">cyfr.stock.exception.scope.form</field>
+        <field name="model">cyfr.stock.exception.scope</field>
+        <field name="arch" type="xml">
+            <form string="Stock Scan Scope">
+                <header>
+                    <button name="action_scan_batch" type="object" string="Scan Next Batch"
+                            class="btn-primary" groups="stock.group_stock_manager"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_title"><h1><field name="name"/></h1></div>
+                    <group>
+                        <group>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                            <field name="warehouse_id" domain="[('company_id', '=', company_id)]"/>
+                            <field name="location_id" domain="[('usage', '=', 'internal'), ('company_id', '=', company_id)]"/>
+                            <field name="zero_days"/>
+                            <field name="active"/>
+                        </group>
+                        <group>
+                            <field name="exception_count"/>
+                            <field name="scan_started_at"/>
+                            <field name="last_scan_at"/>
+                            <field name="last_batch_at"/>
+                            <field name="is_stale"/>
+                            <field name="scan_cursor"/>
+                            <field name="last_error"/>
+                        </group>
+                    </group>
+                    <div class="alert alert-info" role="status">
+                        Free quantity is on hand minus reserved at each internal location. Scans exclude consigned stock and do not forecast incoming moves. A zero duration starts only when this module first observes zero in a scan.
+                    </div>
+                    <field name="row_ids" readonly="1">
+                        <list create="0" edit="0" delete="0" sample="0">
+                            <field name="product_id"/>
+                            <field name="location_id"/>
+                            <field name="on_hand"/>
+                            <field name="reserved"/>
+                            <field name="free_qty"/>
+                            <field name="minimum_qty"/>
+                            <field name="severity"/>
+                            <field name="first_zero_at"/>
+                            <field name="is_persistent_zero"/>
+                            <field name="last_scan_at"/>
+                        </list>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_stock_exception_row_list" model="ir.ui.view">
+        <field name="name">cyfr.stock.exception.row.list</field>
+        <field name="model">cyfr.stock.exception.row</field>
+        <field name="arch" type="xml">
+            <list string="Stock Exceptions" create="0" edit="0" delete="0" sample="0">
+                <field name="severity"/>
+                <field name="product_id"/>
+                <field name="location_id"/>
+                <field name="scope_id"/>
+                <field name="company_id" groups="base.group_multi_company" optional="hide"/>
+                <field name="on_hand" optional="hide"/>
+                <field name="reserved" optional="hide"/>
+                <field name="free_qty"/>
+                <field name="minimum_qty"/>
+                <field name="first_zero_at" optional="hide"/>
+                <field name="is_persistent_zero" optional="hide"/>
+                <field name="last_scan_at"/>
+                <field name="is_stale"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_stock_exception_row_form" model="ir.ui.view">
+        <field name="name">cyfr.stock.exception.row.form</field>
+        <field name="model">cyfr.stock.exception.row</field>
+        <field name="arch" type="xml">
+            <form string="Stock Exception" create="0" edit="0" delete="0">
+                <header>
+                    <button name="action_open_orderpoints" type="object" string="Replenishment Rules"/>
+                </header>
+                <sheet><group>
+                    <field name="scope_id"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <field name="product_id"/>
+                    <field name="location_id"/>
+                    <field name="on_hand"/>
+                    <field name="reserved"/>
+                    <field name="free_qty"/>
+                    <field name="minimum_qty"/>
+                    <field name="severity"/>
+                    <field name="first_zero_at"/>
+                    <field name="is_persistent_zero"/>
+                    <field name="last_scan_at"/>
+                    <field name="is_stale"/>
+                </group></sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_stock_exception_row_search" model="ir.ui.view">
+        <field name="name">cyfr.stock.exception.row.search</field>
+        <field name="model">cyfr.stock.exception.row</field>
+        <field name="arch" type="xml">
+            <search string="Search Stock Exceptions">
+                <field name="product_id"/>
+                <field name="location_id"/>
+                <field name="scope_id"/>
+                <filter name="negative" string="Negative Free" domain="[('severity', '=', 'negative')]"/>
+                <filter name="below_min" string="Below Minimum" domain="[('severity', '=', 'below_min')]"/>
+                <filter name="persistent_zero" string="Persistent Zero" domain="[('is_persistent_zero', '=', True)]"/>
+                <group>
+                    <filter name="group_scope" string="Scan Scope" context="{'group_by': 'scope_id'}"/>
+                    <filter name="group_location" string="Location" context="{'group_by': 'location_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+    <record id="action_stock_exception_scope" model="ir.actions.act_window">
+        <field name="name">Stock Scan Scopes</field>
+        <field name="res_model">cyfr.stock.exception.scope</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <record id="action_stock_exception_row" model="ir.actions.act_window">
+        <field name="name">Stock Exceptions</field>
+        <field name="res_model">cyfr.stock.exception.row</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_stock_exception_row_search"/>
+        <field name="domain">[('is_exception', '=', True)]</field>
+    </record>
+    <menuitem id="menu_stock_exception_root" name="Stock Exceptions" parent="stock.menu_stock_root"
+              groups="stock.group_stock_user" sequence="35"/>
+    <menuitem id="menu_stock_exception_rows" name="Exception Queue" parent="menu_stock_exception_root"
+              action="action_stock_exception_row" groups="stock.group_stock_user" sequence="10"/>
+    <menuitem id="menu_stock_exception_scopes" name="Scan Scopes" parent="menu_stock_exception_root"
+              action="action_stock_exception_scope" groups="stock.group_stock_user" sequence="20"/>
+</odoo>
