@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_receipt_worklist_form" model="ir.ui.view">
+        <field name="name">cyfr.purchase.receipt.worklist.form</field>
+        <field name="model">cyfr.purchase.receipt.worklist</field>
+        <field name="arch" type="xml">
+            <form string="Late Receipts" duplicate="false">
+                <header>
+                    <button name="action_scan" type="object" string="Scan Open Receipts" class="btn-primary"/>
+                    <button name="action_open_results" type="object" string="View Last Scan" invisible="not scanned_at"/>
+                </header>
+                <sheet>
+                    <div class="oe_title"><h1>Late Receipts</h1></div>
+                    <div class="alert alert-info" role="alert">
+                        This worklist covers physical products on confirmed warehouse purchase orders. Services and direct dropship orders are excluded. No purchase order or receipt is changed by scanning.
+                    </div>
+                    <group>
+                        <group>
+                            <field name="horizon_days"/>
+                            <field name="vendor_id"/>
+                            <field name="buyer_id"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                        <group>
+                            <field name="date_from"/>
+                            <field name="date_to"/>
+                            <field name="scanned_at"/>
+                            <field name="candidate_count"/>
+                            <field name="result_count"/>
+                        </group>
+                    </group>
+                    <div class="alert alert-warning" role="alert" invisible="not truncated">
+                        The scan reached its safety limit. Narrow the company, vendor, buyer or date filters to see more lines.
+                    </div>
+                    <field name="truncated" invisible="1"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_receipt_worklist_line_list" model="ir.ui.view">
+        <field name="name">cyfr.purchase.receipt.worklist.line.list</field>
+        <field name="model">cyfr.purchase.receipt.worklist.line</field>
+        <field name="arch" type="xml">
+            <list string="Late Receipts" create="false" edit="false" delete="false">
+                <field name="status" decoration-danger="status == 'late'" decoration-warning="status == 'soon'"/>
+                <field name="expected_day"/>
+                <field name="order_id"/>
+                <field name="purchase_line_id"/>
+                <field name="product_id"/>
+                <field name="vendor_id"/>
+                <field name="buyer_id"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+                <field name="ordered_qty"/>
+                <field name="received_qty"/>
+                <field name="remaining_qty"/>
+                <field name="uom_id"/>
+                <button name="action_schedule_activity" type="object" string="Schedule Follow-up" icon="fa-calendar-plus-o"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_receipt_worklist_line_form" model="ir.ui.view">
+        <field name="name">cyfr.purchase.receipt.worklist.line.form</field>
+        <field name="model">cyfr.purchase.receipt.worklist.line</field>
+        <field name="arch" type="xml">
+            <form string="Late Receipt Line" create="false" edit="false" delete="false">
+                <header>
+                    <button name="action_schedule_activity" type="object" string="Schedule Follow-up" class="btn-primary"/>
+                    <button name="action_open_order" type="object" string="Open Purchase Order"/>
+                    <button name="action_open_receipts" type="object" string="Open Receipts"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="status"/>
+                            <field name="expected_day"/>
+                            <field name="order_id"/>
+                            <field name="purchase_line_id"/>
+                            <field name="product_id"/>
+                            <field name="vendor_id"/>
+                        </group>
+                        <group>
+                            <field name="buyer_id"/>
+                            <field name="company_id"/>
+                            <field name="ordered_qty"/>
+                            <field name="received_qty"/>
+                            <field name="remaining_qty"/>
+                            <field name="uom_id"/>
+                        </group>
+                    </group>
+                    <field name="receipt_ids" widget="many2many_tags"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_receipt_worklist_line_search" model="ir.ui.view">
+        <field name="name">cyfr.purchase.receipt.worklist.line.search</field>
+        <field name="model">cyfr.purchase.receipt.worklist.line</field>
+        <field name="arch" type="xml">
+            <search string="Late Receipts">
+                <field name="vendor_id"/>
+                <field name="buyer_id"/>
+                <field name="company_id"/>
+                <field name="expected_day"/>
+                <filter name="late" string="Late" domain="[('status','=','late')]"/>
+                <filter name="soon" string="Due Soon" domain="[('status','=','soon')]"/>
+                <filter name="missing" string="Date Missing" domain="[('status','=','missing')]"/>
+                <group>
+                    <filter name="group_vendor" string="Vendor" context="{'group_by':'vendor_id'}"/>
+                    <filter name="group_buyer" string="Buyer" context="{'group_by':'buyer_id'}"/>
+                    <filter name="group_company" string="Company" context="{'group_by':'company_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_receipt_worklist" model="ir.actions.act_window">
+        <field name="name">Late Receipts</field>
+        <field name="res_model">cyfr.purchase.receipt.worklist</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_receipt_worklist_form"/>
+        <field name="target">current</field>
+    </record>
+    <menuitem id="menu_receipt_worklist" name="Late Receipts"
+              parent="purchase.menu_procurement_management" action="action_receipt_worklist"
+              groups="purchase.group_purchase_user" sequence="8"/>
+</odoo>

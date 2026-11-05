@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="demo_vendor" model="res.partner">
+        <field name="name">Cyfr Demo Receipt Vendor</field>
+        <field name="supplier_rank" eval="1"/>
+    </record>
+    <record id="demo_product" model="product.product">
+        <field name="name">Cyfr Demo Warehouse Item</field>
+        <field name="type">consu</field>
+        <field name="purchase_ok" eval="True"/>
+        <field name="uom_id" ref="uom.product_uom_unit"/>
+    </record>
+    <record id="demo_service" model="product.product">
+        <field name="name">Cyfr Demo Service (Excluded)</field>
+        <field name="type">service</field>
+        <field name="purchase_ok" eval="True"/>
+        <field name="uom_id" ref="uom.product_uom_unit"/>
+    </record>
+    <record id="demo_order_open" model="purchase.order">
+        <field name="partner_id" ref="demo_vendor"/>
+        <field name="user_id" ref="base.user_admin"/>
+    </record>
+    <record id="demo_order_cancelled" model="purchase.order">
+        <field name="partner_id" ref="demo_vendor"/>
+        <field name="user_id" ref="base.user_admin"/>
+    </record>
+    <record id="demo_line_late" model="purchase.order.line">
+        <field name="order_id" ref="demo_order_open"/>
+        <field name="name">Cyfr Demo Late Receipt</field>
+        <field name="product_id" ref="demo_product"/>
+        <field name="product_qty" eval="5"/>
+        <field name="product_uom_id" ref="uom.product_uom_unit"/>
+        <field name="date_planned" eval="(datetime.now() - timedelta(days=5)).strftime('%Y-%m-%d 12:00:00')"/>
+        <field name="price_unit" eval="10"/>
+    </record>
+    <record id="demo_line_soon" model="purchase.order.line">
+        <field name="order_id" ref="demo_order_open"/>
+        <field name="name">Cyfr Demo Due Soon Receipt</field>
+        <field name="product_id" ref="demo_product"/>
+        <field name="product_qty" eval="3"/>
+        <field name="product_uom_id" ref="uom.product_uom_unit"/>
+        <field name="date_planned" eval="(datetime.now() + timedelta(days=2)).strftime('%Y-%m-%d 12:00:00')"/>
+        <field name="price_unit" eval="10"/>
+    </record>
+    <record id="demo_line_section" model="purchase.order.line">
+        <field name="order_id" ref="demo_order_open"/>
+        <field name="name">Cyfr Demo Section (Excluded)</field>
+        <field name="display_type">line_section</field>
+        <field name="product_qty" eval="0"/>
+    </record>
+    <record id="demo_line_service" model="purchase.order.line">
+        <field name="order_id" ref="demo_order_open"/>
+        <field name="name">Cyfr Demo Service (Excluded)</field>
+        <field name="product_id" ref="demo_service"/>
+        <field name="product_qty" eval="1"/>
+        <field name="product_uom_id" ref="uom.product_uom_unit"/>
+        <field name="date_planned" eval="(datetime.now() - timedelta(days=3)).strftime('%Y-%m-%d 12:00:00')"/>
+        <field name="price_unit" eval="10"/>
+    </record>
+    <record id="demo_line_cancelled" model="purchase.order.line">
+        <field name="order_id" ref="demo_order_cancelled"/>
+        <field name="name">Cyfr Demo Cancelled (Excluded)</field>
+        <field name="product_id" ref="demo_product"/>
+        <field name="product_qty" eval="2"/>
+        <field name="product_uom_id" ref="uom.product_uom_unit"/>
+        <field name="date_planned" eval="(datetime.now() - timedelta(days=4)).strftime('%Y-%m-%d 12:00:00')"/>
+        <field name="price_unit" eval="10"/>
+    </record>
+    <record id="demo_order_open" model="purchase.order">
+        <field name="state">purchase</field>
+    </record>
+    <record id="demo_order_cancelled" model="purchase.order">
+        <field name="state">cancel</field>
+    </record>
+</odoo>

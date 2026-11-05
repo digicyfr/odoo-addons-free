@@ -1,0 +1,390 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* cyfr_purchase_receipt_delays
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cyfr_purchase_receipt_delays 19.0.1.0.0\n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. module: cyfr_purchase_receipt_delays
+#. odoo-python
+#: code:addons/cyfr_purchase_receipt_delays/models/receipt_worklist.py:0
+msgid "A linked purchase line is no longer readable."
+msgstr "Powiązana pozycja zamówienia nie jest już dostępna do odczytu."
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist__buyer_id
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist_line__buyer_id
+#: model_terms:ir.ui.view,arch_db:cyfr_purchase_receipt_delays.view_receipt_worklist_line_search
+msgid "Buyer"
+msgstr "Kupiec"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist__company_id
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist_line__company_id
+#: model_terms:ir.ui.view,arch_db:cyfr_purchase_receipt_delays.view_receipt_worklist_line_search
+msgid "Company"
+msgstr "Firma"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist__create_uid
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist_line__create_uid
+msgid "Created by"
+msgstr "Utworzone przez"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist__create_date
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist_line__create_date
+msgid "Created on"
+msgstr "Utworzono"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:product.template,name:cyfr_purchase_receipt_delays.demo_service_product_template
+msgid "Cyfr Demo Service (Excluded)"
+msgstr "Cyfr: usługa demonstracyjna (pomijana)"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:product.template,name:cyfr_purchase_receipt_delays.demo_product_product_template
+msgid "Cyfr Demo Warehouse Item"
+msgstr "Cyfr: produkt magazynowy demonstracyjny"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields.selection,name:cyfr_purchase_receipt_delays.selection__cyfr_purchase_receipt_worklist_line__status__missing
+#: model_terms:ir.ui.view,arch_db:cyfr_purchase_receipt_delays.view_receipt_worklist_line_search
+msgid "Date Missing"
+msgstr "Brak daty"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist__display_name
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist_line__display_name
+msgid "Display Name"
+msgstr "Nazwa wyświetlana"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields.selection,name:cyfr_purchase_receipt_delays.selection__cyfr_purchase_receipt_worklist_line__status__soon
+#: model_terms:ir.ui.view,arch_db:cyfr_purchase_receipt_delays.view_receipt_worklist_line_search
+msgid "Due Soon"
+msgstr "Wkrótce"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist__horizon_days
+msgid "Due Soon (Days)"
+msgstr "Wkrótce (dni)"
+
+#. module: cyfr_purchase_receipt_delays
+#. odoo-python
+#: code:addons/cyfr_purchase_receipt_delays/models/receipt_worklist.py:0
+msgid "Due-soon horizon must be between 0 and 90 days."
+msgstr "Horyzont „Wkrótce” musi mieć od 0 do 90 dni."
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist_line__expected_day
+msgid "Expected Day"
+msgstr "Dzień oczekiwany"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist__date_from
+msgid "Expected From"
+msgstr "Oczekiwane od"
+
+#. module: cyfr_purchase_receipt_delays
+#. odoo-python
+#: code:addons/cyfr_purchase_receipt_delays/models/receipt_worklist.py:0
+msgid "Expected From must be on or before Expected Through."
+msgstr "Data „Oczekiwane od” nie może być późniejsza niż „Oczekiwane do”."
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist__date_to
+msgid "Expected Through"
+msgstr "Oczekiwane do"
+
+#. module: cyfr_purchase_receipt_delays
+#. odoo-python
+#: code:addons/cyfr_purchase_receipt_delays/models/receipt_worklist.py:0
+msgid "Follow up on purchase line #%s"
+msgstr "Kontakt w sprawie pozycji zakupu nr %s"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist__id
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist__scanned_at
+msgid "Last Scan"
+msgstr "Ostatni skan"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist__write_uid
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist_line__write_uid
+msgid "Last Updated by"
+msgstr "Ostatnio zmienione przez"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist__write_date
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist_line__write_date
+msgid "Last Updated on"
+msgstr "Ostatnia zmiana"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields.selection,name:cyfr_purchase_receipt_delays.selection__cyfr_purchase_receipt_worklist_line__status__late
+#: model_terms:ir.ui.view,arch_db:cyfr_purchase_receipt_delays.view_receipt_worklist_line_search
+msgid "Late"
+msgstr "Opóźnione"
+
+#. module: cyfr_purchase_receipt_delays
+#: model_terms:ir.ui.view,arch_db:cyfr_purchase_receipt_delays.view_receipt_worklist_line_form
+msgid "Late Receipt Line"
+msgstr "Pozycja opóźnionego przyjęcia"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model,name:cyfr_purchase_receipt_delays.model_cyfr_purchase_receipt_worklist_line
+msgid "Late Receipt Worklist Row"
+msgstr "Pozycja listy opóźnionych przyjęć"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model,name:cyfr_purchase_receipt_delays.model_cyfr_purchase_receipt_worklist
+msgid "Late Receipt Worklist Scan"
+msgstr "Skan listy opóźnionych przyjęć"
+
+#. module: cyfr_purchase_receipt_delays
+#. odoo-python
+#: code:addons/cyfr_purchase_receipt_delays/models/receipt_worklist.py:0
+#: model:ir.actions.act_window,name:cyfr_purchase_receipt_delays.action_receipt_worklist
+#: model:ir.ui.menu,name:cyfr_purchase_receipt_delays.menu_receipt_worklist
+#: model_terms:ir.ui.view,arch_db:cyfr_purchase_receipt_delays.view_receipt_worklist_form
+#: model_terms:ir.ui.view,arch_db:cyfr_purchase_receipt_delays.view_receipt_worklist_line_list
+#: model_terms:ir.ui.view,arch_db:cyfr_purchase_receipt_delays.view_receipt_worklist_line_search
+msgid "Late Receipts"
+msgstr "Opóźnione przyjęcia"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist__line_ids
+msgid "Line"
+msgstr "Pozycja"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist__candidate_count
+msgid "Lines Checked"
+msgstr "Sprawdzone pozycje"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist__result_count
+msgid "Lines Shown"
+msgstr "Pokazane pozycje"
+
+#. module: cyfr_purchase_receipt_delays
+#. odoo-python
+#: code:addons/cyfr_purchase_receipt_delays/models/receipt_worklist.py:0
+msgid "Only worklist filters may be changed directly."
+msgstr "Bezpośrednio można zmieniać tylko filtry listy."
+
+#. module: cyfr_purchase_receipt_delays
+#. odoo-python
+#: code:addons/cyfr_purchase_receipt_delays/models/receipt_worklist.py:0
+msgid "Only worklist filters may be set directly."
+msgstr "Bezpośrednio można ustawiać tylko filtry listy."
+
+#. module: cyfr_purchase_receipt_delays
+#: model_terms:ir.ui.view,arch_db:cyfr_purchase_receipt_delays.view_receipt_worklist_line_form
+msgid "Open Purchase Order"
+msgstr "Otwórz zamówienie"
+
+#. module: cyfr_purchase_receipt_delays
+#: model_terms:ir.ui.view,arch_db:cyfr_purchase_receipt_delays.view_receipt_worklist_line_form
+msgid "Open Receipts"
+msgstr "Otwórz przyjęcia"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist_line__order_id
+msgid "Order Reference"
+msgstr "Numer zamówienia"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist__owner_id
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist_line__owner_id
+msgid "Owner"
+msgstr "Właściciel"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist_line__vendor_id
+msgid "Partner"
+msgstr "Kontrahent"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist_line__product_id
+msgid "Product"
+msgstr "Produkt"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist_line__purchase_line_id
+msgid "Purchase Line"
+msgstr "Pozycja zakupu"
+
+#. module: cyfr_purchase_receipt_delays
+#. odoo-python
+#: code:addons/cyfr_purchase_receipt_delays/models/receipt_worklist.py:0
+msgid "Purchase Order"
+msgstr "Zamówienie zakupu"
+
+#. module: cyfr_purchase_receipt_delays
+#. odoo-python
+#: code:addons/cyfr_purchase_receipt_delays/models/receipt_worklist.py:0
+msgid "Purchase order %s, line #%s: %s"
+msgstr "Zamówienie %s, pozycja nr %s: %s"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist_line__ordered_qty
+msgid "Quantity"
+msgstr "Ilość"
+
+#. module: cyfr_purchase_receipt_delays
+#. odoo-python
+#: code:addons/cyfr_purchase_receipt_delays/models/receipt_worklist.py:0
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist_line__receipt_ids
+msgid "Receipts"
+msgstr "Przyjęcia"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist_line__received_qty
+msgid "Received Qty"
+msgstr "Ilość przyjęta"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist_line__remaining_qty
+msgid "Remaining Qty"
+msgstr "Pozostała ilość"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist__truncated
+msgid "Results Truncated"
+msgstr "Wyniki ograniczone"
+
+#. module: cyfr_purchase_receipt_delays
+#: model_terms:ir.ui.view,arch_db:cyfr_purchase_receipt_delays.view_receipt_worklist_form
+msgid "Scan Open Receipts"
+msgstr "Skanuj otwarte przyjęcia"
+
+#. module: cyfr_purchase_receipt_delays
+#: model_terms:ir.ui.view,arch_db:cyfr_purchase_receipt_delays.view_receipt_worklist_line_form
+#: model_terms:ir.ui.view,arch_db:cyfr_purchase_receipt_delays.view_receipt_worklist_line_list
+msgid "Schedule Follow-up"
+msgstr "Zaplanuj działanie"
+
+#. module: cyfr_purchase_receipt_delays
+#. odoo-python
+#: code:addons/cyfr_purchase_receipt_delays/models/receipt_worklist.py:0
+msgid "Schedule Purchase Follow-up"
+msgstr "Zaplanuj kontakt w sprawie zakupu"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist_line__status
+msgid "Status"
+msgstr "Status"
+
+#. module: cyfr_purchase_receipt_delays
+#. odoo-python
+#: code:addons/cyfr_purchase_receipt_delays/models/receipt_worklist.py:0
+msgid "The purchase line company is not allowed for this worklist."
+msgstr "Firma pozycji zamówienia nie jest dostępna dla tej listy."
+
+#. module: cyfr_purchase_receipt_delays
+#: model_terms:ir.ui.view,arch_db:cyfr_purchase_receipt_delays.view_receipt_worklist_form
+msgid ""
+"The scan reached its safety limit. Narrow the company, vendor, buyer or date"
+" filters to see more lines."
+msgstr "Skan osiągnął limit bezpieczeństwa. Zawęź firmę, dostawcę, kupca lub daty, aby zobaczyć więcej pozycji."
+
+#. module: cyfr_purchase_receipt_delays
+#. odoo-python
+#: code:addons/cyfr_purchase_receipt_delays/models/receipt_worklist.py:0
+msgid "The selected company is not allowed for your session."
+msgstr "Wybrana firma nie jest dostępna w tej sesji."
+
+#. module: cyfr_purchase_receipt_delays
+#. odoo-python
+#: code:addons/cyfr_purchase_receipt_delays/models/receipt_worklist.py:0
+msgid "This purchase line is already fully received."
+msgstr "Ta pozycja zamówienia została już w pełni przyjęta."
+
+#. module: cyfr_purchase_receipt_delays
+#. odoo-python
+#: code:addons/cyfr_purchase_receipt_delays/models/receipt_worklist.py:0
+msgid "This purchase line is no longer in an allowed company."
+msgstr "Firma tej pozycji zamówienia nie jest już dostępna."
+
+#. module: cyfr_purchase_receipt_delays
+#. odoo-python
+#: code:addons/cyfr_purchase_receipt_delays/models/receipt_worklist.py:0
+msgid "This purchase order is no longer confirmed."
+msgstr "To zamówienie nie jest już potwierdzone."
+
+#. module: cyfr_purchase_receipt_delays
+#: model_terms:ir.ui.view,arch_db:cyfr_purchase_receipt_delays.view_receipt_worklist_form
+msgid ""
+"This worklist covers physical products on confirmed warehouse purchase "
+"orders. Services and direct dropship orders are excluded. No purchase order "
+"or receipt is changed by scanning."
+msgstr "Lista obejmuje produkty fizyczne w potwierdzonych zamówieniach z dostawą do magazynu. Usługi i bezpośrednie dostawy do klienta są pomijane. Skanowanie nie zmienia zamówień ani przyjęć."
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist_line__uom_id
+msgid "Unit"
+msgstr "Jednostka"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist__vendor_id
+#: model_terms:ir.ui.view,arch_db:cyfr_purchase_receipt_delays.view_receipt_worklist_line_search
+msgid "Vendor"
+msgstr "Dostawca"
+
+#. module: cyfr_purchase_receipt_delays
+#: model_terms:ir.ui.view,arch_db:cyfr_purchase_receipt_delays.view_receipt_worklist_form
+msgid "View Last Scan"
+msgstr "Pokaż ostatni skan"
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,field_description:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist_line__worklist_id
+msgid "Worklist"
+msgstr "Lista"
+
+#. module: cyfr_purchase_receipt_delays
+#. odoo-python
+#: code:addons/cyfr_purchase_receipt_delays/models/receipt_worklist.py:0
+msgid "Worklist rows are generated only by a scan."
+msgstr "Pozycje listy są tworzone wyłącznie podczas skanowania."
+
+#. module: cyfr_purchase_receipt_delays
+#. odoo-python
+#: code:addons/cyfr_purchase_receipt_delays/models/receipt_worklist.py:0
+msgid "Worklist rows are read-only."
+msgstr "Pozycje listy są tylko do odczytu."
+
+#. module: cyfr_purchase_receipt_delays
+#. odoo-python
+#: code:addons/cyfr_purchase_receipt_delays/models/receipt_worklist.py:0
+msgid "Worklist rows are removed only by a scan or by expiration."
+msgstr "Pozycje listy są usuwane wyłącznie podczas skanowania lub po wygaśnięciu."
+
+#. module: cyfr_purchase_receipt_delays
+#: model:ir.model.fields,help:cyfr_purchase_receipt_delays.field_cyfr_purchase_receipt_worklist_line__vendor_id
+msgid "You can find a vendor by its Name, TIN, Email or Internal Reference."
+msgstr "Dostawcę można znaleźć po nazwie, NIP, adresie e-mail lub numerze wewnętrznym."
+
+#. module: cyfr_purchase_receipt_delays
+#. odoo-python
+#: code:addons/cyfr_purchase_receipt_delays/models/receipt_worklist.py:0
+msgid "You can only use your own receipt worklist."
+msgstr "Możesz używać tylko własnej listy przyjęć."
+
+#. module: cyfr_purchase_receipt_delays
+#. odoo-python
+#: code:addons/cyfr_purchase_receipt_delays/models/receipt_worklist.py:0
+msgid "id"
+msgstr "id"
