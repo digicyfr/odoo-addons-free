@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cyfr_pos_tax_audit_manager,POS tax audit manager,model_cyfr_pos_tax_audit,point_of_sale.group_pos_manager,1,1,1,1
+access_cyfr_pos_tax_audit_line_manager,POS tax audit row manager,model_cyfr_pos_tax_audit_line,point_of_sale.group_pos_manager,1,0,0,0

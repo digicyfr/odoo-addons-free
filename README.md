@@ -8,6 +8,7 @@ license copy, English and Polish guides, demo data, and tests.
 | --- | --- | --- |
 | [`cyfr_product_data_health`](addons/cyfr_product_data_health/README.md) | Review missing product identifiers, prices, categories, and images after a catalog import | `product` |
 | [`cyfr_crm_next_step`](addons/cyfr_crm_next_step/README.md) | Find open CRM leads with no scheduled activity or an overdue activity | `crm` |
+| [`cyfr_pos_tax_audit`](addons/cyfr_pos_tax_audit/README.md) | Review POS catalog taxes and configured fiscal-position mappings before opening a till | `point_of_sale` |
 
 ## Install
 

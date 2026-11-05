@@ -8,6 +8,7 @@ polsku, dane demonstracyjne oraz testy.
 | --- | --- | --- |
 | [`cyfr_product_data_health`](addons/cyfr_product_data_health/README.pl.md) | Przegląd brakujących identyfikatorów, cen, kategorii i obrazów produktów po imporcie katalogu | `product` |
 | [`cyfr_crm_next_step`](addons/cyfr_crm_next_step/README.pl.md) | Lista otwartych szans bez zaplanowanego działania lub z zaległym działaniem | `crm` |
+| [`cyfr_pos_tax_audit`](addons/cyfr_pos_tax_audit/README.pl.md) | Przegląd podatków katalogu POS i mapowań skonfigurowanych pozycji fiskalnych przed rozpoczęciem sprzedaży | `point_of_sale` |
 
 ## Instalacja
 

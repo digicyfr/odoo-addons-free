@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_pos_tax_audit_list" model="ir.ui.view">
+        <field name="name">cyfr.pos.tax.audit.list</field>
+        <field name="model">cyfr.pos.tax.audit</field>
+        <field name="arch" type="xml">
+            <list string="POS Tax Audits" create="1" edit="0">
+                <field name="config_id"/>
+                <field name="company_id"/>
+                <field name="user_id"/>
+                <field name="scanned_at"/>
+                <field name="scanned_count"/>
+                <field name="total_count"/>
+                <field name="line_count"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_pos_tax_audit_form" model="ir.ui.view">
+        <field name="name">cyfr.pos.tax.audit.form</field>
+        <field name="model">cyfr.pos.tax.audit</field>
+        <field name="arch" type="xml">
+            <form string="POS Tax Setup Audit">
+                <header>
+                    <button name="action_run" type="object" string="Scan This Page" class="btn-primary" groups="point_of_sale.group_pos_manager"/>
+                    <button name="action_next_page" type="object" string="Next Page" invisible="not scanned_at or skipped_count == 0" groups="point_of_sale.group_pos_manager"/>
+                    <button name="action_export_csv" type="object" string="Export CSV" invisible="not scanned_at" groups="point_of_sale.group_pos_manager"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="config_id" options="{'no_create': True}"/>
+                            <field name="company_id"/>
+                            <field name="user_id"/>
+                        </group>
+                        <group>
+                            <field name="offset"/>
+                            <field name="page_size"/>
+                            <field name="scanned_at"/>
+                        </group>
+                    </group>
+                    <group string="Page Progress">
+                        <field name="total_count"/>
+                        <field name="scanned_count"/>
+                        <field name="skipped_count"/>
+                        <field name="scenario_count"/>
+                        <field name="line_count"/>
+                    </group>
+                    <field name="note" readonly="1" nolabel="1"/>
+                    <field name="line_ids" readonly="1">
+                        <list string="Tax Matrix" create="0" delete="0">
+                            <field name="product_id"/>
+                            <field name="scenario_name"/>
+                            <field name="source_tax_ids" widget="many2many_tags"/>
+                            <field name="result_tax_ids" widget="many2many_tags"/>
+                            <field name="no_tax"/>
+                            <field name="multiple_taxes"/>
+                            <field name="foreign_company_tax"/>
+                            <field name="empty_result"/>
+                            <field name="mapping"/>
+                        </list>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_pos_tax_audit_line_list" model="ir.ui.view">
+        <field name="name">cyfr.pos.tax.audit.line.list</field>
+        <field name="model">cyfr.pos.tax.audit.line</field>
+        <field name="arch" type="xml">
+            <list string="POS Tax Matrix" create="0" edit="0" delete="0">
+                <field name="product_id"/>
+                <field name="company_id"/>
+                <field name="scenario_name"/>
+                <field name="position_id"/>
+                <field name="source_tax_ids" widget="many2many_tags"/>
+                <field name="result_tax_ids" widget="many2many_tags"/>
+                <field name="no_tax"/>
+                <field name="multiple_taxes"/>
+                <field name="foreign_company_tax"/>
+                <field name="empty_result"/>
+                <field name="mapping"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_pos_tax_audit_line_search" model="ir.ui.view">
+        <field name="name">cyfr.pos.tax.audit.line.search</field>
+        <field name="model">cyfr.pos.tax.audit.line</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="product_id"/>
+                <field name="position_id"/>
+                <field name="company_id"/>
+                <filter name="review" string="Review Flags" domain="['|', '|', ('multiple_taxes', '=', True), ('foreign_company_tax', '=', True), ('empty_result', '=', True)]"/>
+                <group>
+                    <filter name="group_product" string="Product" context="{'group_by': 'product_id'}"/>
+                    <filter name="group_position" string="Fiscal Position" context="{'group_by': 'position_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+    <record id="view_pos_tax_audit_line_form" model="ir.ui.view">
+        <field name="name">cyfr.pos.tax.audit.line.form</field>
+        <field name="model">cyfr.pos.tax.audit.line</field>
+        <field name="arch" type="xml">
+            <form string="POS Tax Matrix Row" create="0" edit="0" delete="0">
+                <sheet>
+                    <group>
+                        <field name="audit_id"/>
+                        <field name="product_id"/>
+                        <field name="company_id"/>
+                        <field name="scenario_name"/>
+                        <field name="position_id"/>
+                        <field name="source_tax_ids" widget="many2many_tags"/>
+                        <button name="action_open_source_taxes" type="object" string="Open Source Taxes" colspan="2" invisible="not source_tax_ids" groups="point_of_sale.group_pos_manager"/>
+                        <field name="result_tax_ids" widget="many2many_tags"/>
+                        <button name="action_open_result_taxes" type="object" string="Open Result Taxes" colspan="2" invisible="not result_tax_ids" groups="point_of_sale.group_pos_manager"/>
+                        <field name="no_tax"/>
+                        <field name="multiple_taxes"/>
+                        <field name="foreign_company_tax"/>
+                        <field name="empty_result"/>
+                        <field name="mapping"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_pos_tax_audit" model="ir.actions.act_window">
+        <field name="name">POS Tax Audits</field>
+        <field name="res_model">cyfr.pos.tax.audit</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <record id="action_pos_tax_audit_matrix" model="ir.actions.act_window">
+        <field name="name">POS Tax Matrix</field>
+        <field name="res_model">cyfr.pos.tax.audit.line</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <menuitem id="menu_pos_tax_audit" name="Tax Setup Audit" parent="point_of_sale.menu_point_config_product" action="action_pos_tax_audit" sequence="85" groups="point_of_sale.group_pos_manager"/>
+    <menuitem id="menu_pos_tax_audit_matrix" name="Tax Matrix" parent="point_of_sale.menu_point_config_product" action="action_pos_tax_audit_matrix" sequence="86" groups="point_of_sale.group_pos_manager"/>
+</odoo>

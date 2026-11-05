@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="demo_tax_23" model="account.tax">
+        <field name="name">Audit demo 23%</field>
+        <field name="amount">23</field>
+        <field name="type_tax_use">sale</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+    <record id="demo_tax_8" model="account.tax">
+        <field name="name">Audit demo 8%</field>
+        <field name="amount">8</field>
+        <field name="type_tax_use">sale</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+    <record id="demo_position_default" model="account.fiscal.position">
+        <field name="name">Audit demo: take-away</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+    <record id="demo_position_allowed" model="account.fiscal.position">
+        <field name="name">Audit demo: on-site</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+    <record id="demo_tax_8" model="account.tax">
+        <field name="original_tax_ids" eval="[(4, ref('demo_tax_23'))]"/>
+        <field name="fiscal_position_ids" eval="[(4, ref('demo_position_default'))]"/>
+    </record>
+    <record id="demo_pos_category" model="pos.category">
+        <field name="name">Audit demo category</field>
+    </record>
+    <record id="demo_config" model="pos.config">
+        <field name="name">Tax Audit Demo POS</field>
+        <field name="company_id" ref="base.main_company"/>
+        <field name="limit_categories">True</field>
+        <field name="iface_available_categ_ids" eval="[(4, ref('demo_pos_category'))]"/>
+        <field name="tax_regime_selection">True</field>
+        <field name="default_fiscal_position_id" ref="demo_position_default"/>
+        <field name="fiscal_position_ids" eval="[(4, ref('demo_position_default')), (4, ref('demo_position_allowed'))]"/>
+    </record>
+    <record id="demo_product_taxed" model="product.template">
+        <field name="name">Audit demo taxed item</field>
+        <field name="type">consu</field>
+        <field name="list_price">12.30</field>
+        <field name="available_in_pos">True</field>
+        <field name="sale_ok">True</field>
+        <field name="pos_categ_ids" eval="[(4, ref('demo_pos_category'))]"/>
+        <field name="taxes_id" eval="[(6, 0, [ref('demo_tax_23')])]"/>
+    </record>
+    <record id="demo_product_zero" model="product.template">
+        <field name="name">Audit demo intentionally zero tax</field>
+        <field name="type">consu</field>
+        <field name="available_in_pos">True</field>
+        <field name="sale_ok">True</field>
+        <field name="pos_categ_ids" eval="[(4, ref('demo_pos_category'))]"/>
+        <field name="taxes_id" eval="[(5, 0, 0)]"/>
+    </record>
+    <record id="demo_product_excluded_category" model="product.template">
+        <field name="name">Audit demo excluded category</field>
+        <field name="type">consu</field>
+        <field name="available_in_pos">True</field>
+        <field name="sale_ok">True</field>
+        <field name="taxes_id" eval="[(6, 0, [ref('demo_tax_23')])]"/>
+    </record>
+</odoo>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="rule_pos_tax_audit_owner_company" model="ir.rule">
+        <field name="name">POS tax audit owner and company</field>
+        <field name="model_id" ref="model_cyfr_pos_tax_audit"/>
+        <field name="domain_force">[('user_id', '=', user.id), ('company_id', 'in', company_ids)]</field>
+    </record>
+    <record id="rule_pos_tax_audit_line_owner_company" model="ir.rule">
+        <field name="name">POS tax matrix owner and company</field>
+        <field name="model_id" ref="model_cyfr_pos_tax_audit_line"/>
+        <field name="domain_force">[('audit_id.user_id', '=', user.id), ('company_id', 'in', company_ids)]</field>
+    </record>
+</odoo>
