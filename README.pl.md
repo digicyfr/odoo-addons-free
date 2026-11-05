@@ -9,6 +9,13 @@ polsku, dane demonstracyjne oraz testy.
 | [`cyfr_product_data_health`](addons/cyfr_product_data_health/README.pl.md) | Przegląd brakujących identyfikatorów, cen, kategorii i obrazów produktów po imporcie katalogu | `product` |
 | [`cyfr_crm_next_step`](addons/cyfr_crm_next_step/README.pl.md) | Lista otwartych szans bez zaplanowanego działania lub z zaległym działaniem | `crm` |
 | [`cyfr_pos_tax_audit`](addons/cyfr_pos_tax_audit/README.pl.md) | Przegląd podatków katalogu POS i mapowań skonfigurowanych pozycji fiskalnych przed rozpoczęciem sprzedaży | `point_of_sale` |
+| [`cyfr_stock_exception_queue`](addons/cyfr_stock_exception_queue/README.pl.md) | Przegląd ujemnych i niedostępnych stanów magazynowych w kolejce informacyjnej | `stock` |
+| [`cyfr_purchase_receipt_delays`](addons/cyfr_purchase_receipt_delays/README.pl.md) | Lista opóźnionych i zbliżających się przyjęć zakupowych z działaniami następnymi | `purchase_stock` |
+| [`cyfr_website_language_audit`](addons/cyfr_website_language_audit/README.pl.md) | Przegląd tłumaczeń stron oraz lokalizowanych danych SEO i opisów obrazów | `website` |
+| [`cyfr_quote_watchlist`](addons/cyfr_quote_watchlist/README.pl.md) | Lista ofert według terminu ważności i brakujących przyszłych działań | `sale_management` |
+| [`cyfr_pos_refund_evidence`](addons/cyfr_pos_refund_evidence/README.pl.md) | Rejestrowanie powodów zwrotów i powiązania z pierwotną sprzedażą po natywnym zwrocie POS | `point_of_sale` |
+| [`cyfr_lot_expiry_worklist`](addons/cyfr_lot_expiry_worklist/README.pl.md) | Przypisywanie i potwierdzanie działań dla partii według lokalizacji i właściciela zapasu | `product_expiry` |
+| [`cyfr_pos_shift_handover`](addons/cyfr_pos_shift_handover/README.pl.md) | Przekazywanie zadań operacyjnych między sesjami tego samego punktu sprzedaży | `point_of_sale` |
 
 ## Instalacja
 

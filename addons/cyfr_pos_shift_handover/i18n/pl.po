@@ -1,0 +1,570 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* cyfr_pos_shift_handover
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0-20260908\n"
+"Language: pl_PL\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-05 08:47+0000\n"
+"PO-Revision-Date: 2026-11-05 08:47+0000\n"
+"Last-Translator: \n"
+"Language-Team: Polish \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+#. module: cyfr_pos_shift_handover
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_shift_handover.view_pos_session_form_handover
+msgid "<span class=\"o_stat_text\">Incoming Handovers</span>"
+msgstr "<span class=\"o_stat_text\">Przekazania przychodzące</span>"
+
+#. module: cyfr_pos_shift_handover
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_shift_handover.view_pos_session_form_handover
+msgid "<span class=\"o_stat_text\">Outgoing Handover</span>"
+msgstr "<span class=\"o_stat_text\">Przekazanie wychodzące</span>"
+
+#. module: cyfr_pos_shift_handover
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_shift_handover.view_pos_shift_handover_form
+msgid "<span class=\"o_stat_text\">Tasks</span>"
+msgstr "<span class=\"o_stat_text\">Zadania</span>"
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "A Point of Sale user is required."
+msgstr "Wymagany jest użytkownik punktu sprzedaży."
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "A claimed handover requires a session, user, and timestamp."
+msgstr "Przejęte przekazanie wymaga sesji, użytkownika i znacznika czasu."
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "A linked POS session or register is no longer readable."
+msgstr "Powiązana sesja lub stanowisko POS nie są już dostępne do odczytu."
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "A task cannot be moved to another handover or company."
+msgstr "Nie można przenieść zadania do innego przekazania ani firmy."
+
+#. module: cyfr_pos_shift_handover
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_shift_handover.view_pos_shift_handover_form
+msgid "Acknowledge Receipt"
+msgstr "Potwierdź odbiór"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields.selection,name:cyfr_pos_shift_handover.selection__cyfr_pos_handover__state__acknowledged
+msgid "Acknowledged"
+msgstr "Potwierdzone"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover__acknowledged_at
+msgid "Acknowledged At"
+msgstr "Potwierdzono"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover__acknowledged_by_id
+msgid "Acknowledged By"
+msgstr "Potwierdził(a)"
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "Acknowledgement requires a claim, user, and timestamp."
+msgstr "Potwierdzenie odbioru wymaga przejęcia, użytkownika i znacznika czasu."
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "Another user is claiming this handover. Retry shortly."
+msgstr "Inny użytkownik przejmuje to przekazanie. Spróbuj ponownie za chwilę."
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "Another user is updating this handover. Retry shortly."
+msgstr "Inny użytkownik aktualizuje to przekazanie. Spróbuj ponownie za chwilę."
+
+#. module: cyfr_pos_shift_handover
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_shift_handover.view_pos_shift_handover_search
+msgid "Awaiting Acknowledgement"
+msgstr "Oczekuje na potwierdzenie"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields.selection,name:cyfr_pos_shift_handover.selection__cyfr_pos_handover_task__state__cancelled
+msgid "Cancelled"
+msgstr "Anulowane"
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "Choose a handover for this task."
+msgstr "Wybierz przekazanie dla tego zadania."
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "Choose an outgoing POS session."
+msgstr "Wybierz wychodzącą sesję POS."
+
+#. module: cyfr_pos_shift_handover
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_shift_handover.view_pos_shift_handover_form
+msgid "Claim Current Session"
+msgstr "Przejmij bieżącą sesję"
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "Claim and acknowledgement fields can only be set by their buttons."
+msgstr "Pola przejęcia i potwierdzenia można ustawiać tylko przyciskami."
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "Claim this handover before acknowledging it."
+msgstr "Przejmij przekazanie przed potwierdzeniem odbioru."
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields.selection,name:cyfr_pos_shift_handover.selection__cyfr_pos_handover__state__claimed
+msgid "Claimed"
+msgstr "Przejęte"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover__claimed_at
+msgid "Claimed At"
+msgstr "Przejęto"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover__claimed_by_id
+msgid "Claimed By"
+msgstr "Przejął/przejęła"
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "Close the regular outgoing session before it can be claimed."
+msgstr "Zamknij zwykłą sesję wychodzącą przed jej przejęciem."
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover__company_id
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover_task__company_id
+msgid "Company"
+msgstr "Firma"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover__create_uid
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover_task__create_uid
+msgid "Created by"
+msgstr "Utworzone przez"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover__create_date
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover_task__create_date
+msgid "Created on"
+msgstr "Data utworzenia"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover__display_name
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover_task__display_name
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_pos_session__display_name
+msgid "Display Name"
+msgstr "Nazwa wyświetlana"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields.selection,name:cyfr_pos_shift_handover.selection__cyfr_pos_handover_task__state__done
+msgid "Done"
+msgstr "Wykonane"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover_task__due_at
+msgid "Due At"
+msgstr "Termin"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover__name
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover_task__handover_id
+msgid "Handover"
+msgstr "Przekazanie"
+
+#. module: cyfr_pos_shift_handover
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_shift_handover.view_pos_shift_handover_task_form
+msgid "Handover Task"
+msgstr "Zadanie przekazania"
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+#: model:ir.actions.act_window,name:cyfr_pos_shift_handover.action_pos_shift_handover_task
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_shift_handover.view_pos_shift_handover_task_list
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_shift_handover.view_pos_shift_handover_task_search
+msgid "Handover Tasks"
+msgstr "Zadania przekazania"
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "Handover tasks are retained for audit and cannot be deleted."
+msgstr "Zadania przekazania są zachowywane do audytu i nie można ich usunąć."
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields.selection,name:cyfr_pos_shift_handover.selection__cyfr_pos_handover_task__priority__high
+msgid "High"
+msgstr "Wysoki"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover__id
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover_task__id
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_pos_session__id
+msgid "ID"
+msgstr "ID"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields.selection,name:cyfr_pos_shift_handover.selection__cyfr_pos_handover_task__state__in_progress
+msgid "In Progress"
+msgstr "W toku"
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/pos_session.py:0
+msgid "Incoming Handovers"
+msgstr "Przekazania przychodzące"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover__target_session_id
+msgid "Incoming Session"
+msgstr "Sesja przychodząca"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover__write_uid
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover_task__write_uid
+msgid "Last Updated by"
+msgstr "Ostatnio zmienione przez"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover__write_date
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover_task__write_date
+msgid "Last Updated on"
+msgstr "Data ostatniej zmiany"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields.selection,name:cyfr_pos_shift_handover.selection__cyfr_pos_handover_task__priority__normal
+msgid "Normal"
+msgstr "Zwykły"
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "Only a manager may reassign, cancel, or reopen a claimed task."
+msgstr "Tylko kierownik może ponownie przypisać, anulować lub otworzyć przejęte zadanie."
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "Only a manager may reopen a completed or cancelled task."
+msgstr "Tylko kierownik może ponownie otworzyć wykonane lub anulowane zadanie."
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "Only an open operational task may be created directly."
+msgstr "Bezpośrednio można utworzyć tylko otwarte zadanie operacyjne."
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/pos_session.py:0
+msgid "Only an open regular session can receive a handover."
+msgstr "Tylko otwarta zwykła sesja może przyjąć przekazanie."
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.constraint,message:cyfr_pos_shift_handover.constraint_cyfr_pos_handover_one_handover_per_session
+msgid "Only one handover is allowed for each outgoing POS session."
+msgstr "Dla każdej wychodzącej sesji POS dozwolone jest tylko jedno przekazanie."
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "Only the claimant or a POS manager may acknowledge this handover."
+msgstr "Tylko osoba przejmująca lub kierownik POS może potwierdzić to przekazanie."
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "Only the current session of this register may receive the handover."
+msgstr "Przekazanie może przyjąć tylko bieżąca sesja tego stanowiska."
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "Only the preparer may add tasks before claim; managers may add later."
+msgstr "Przed przejęciem zadania może dodawać tylko autor; kierownik może dodawać je później."
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "Only the preparer may edit an unclaimed handover."
+msgstr "Nieprzejęte przekazanie może edytować tylko jego autor."
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "Only the preparer, task owner, or a POS manager may update this task."
+msgstr "To zadanie może aktualizować tylko autor, jego właściciel lub kierownik POS."
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields.selection,name:cyfr_pos_shift_handover.selection__cyfr_pos_handover_task__state__open
+msgid "Open"
+msgstr "Otwarte"
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "Open the next regular session on this register before claiming."
+msgstr "Przed przejęciem otwórz następną zwykłą sesję na tym stanowisku."
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/pos_session.py:0
+msgid "Open the regular session before preparing a handover."
+msgstr "Otwórz zwykłą sesję przed przygotowaniem przekazania."
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover_task__note
+msgid "Operational Note"
+msgstr "Notatka operacyjna"
+
+#. module: cyfr_pos_shift_handover
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_shift_handover.view_pos_shift_handover_form
+msgid "Operational Tasks"
+msgstr "Zadania operacyjne"
+
+#. module: cyfr_pos_shift_handover
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_shift_handover.view_pos_shift_handover_task_form
+msgid "Operational details for the next shift"
+msgstr "Szczegóły operacyjne dla następnej zmiany"
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/pos_session.py:0
+msgid "Outgoing Handovers"
+msgstr "Przekazania wychodzące"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover__source_session_id
+msgid "Outgoing Session"
+msgstr "Sesja wychodząca"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover_task__is_overdue
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_shift_handover.view_pos_shift_handover_task_search
+msgid "Overdue"
+msgstr "Zaległe"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.ui.menu,name:cyfr_pos_shift_handover.menu_pos_shift_handover_task
+msgid "Overdue Handover Tasks"
+msgstr "Zaległe zadania przekazania"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover_task__owner_id
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_shift_handover.view_pos_shift_handover_task_search
+msgid "Owner"
+msgstr "Właściciel"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model,name:cyfr_pos_shift_handover.model_cyfr_pos_handover
+msgid "POS Shift Handover"
+msgstr "Przekazanie zmiany POS"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model,name:cyfr_pos_shift_handover.model_cyfr_pos_handover_task
+msgid "POS Shift Handover Task"
+msgstr "Zadanie przekazania zmiany POS"
+
+#. module: cyfr_pos_shift_handover
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_shift_handover.view_pos_shift_handover_form
+msgid "People and Times"
+msgstr "Osoby i czas"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover__config_id
+msgid "Point of Sale"
+msgstr "Punkt sprzedaży"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model,name:cyfr_pos_shift_handover.model_pos_session
+msgid "Point of Sale Session"
+msgstr "Sesja punktu sprzedaży"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover__created_by_id
+msgid "Prepared By"
+msgstr "Przygotował(a)"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover_task__priority
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_shift_handover.view_pos_shift_handover_task_search
+msgid "Priority"
+msgstr "Priorytet"
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "Recovery sessions cannot be handover sources."
+msgstr "Sesje awaryjne nie mogą być źródłem przekazania."
+
+#. module: cyfr_pos_shift_handover
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_shift_handover.view_pos_shift_handover_search
+msgid "Register"
+msgstr "Stanowisko"
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "Session and acknowledgement fields cannot be edited directly."
+msgstr "Nie można bezpośrednio edytować pól sesji ani potwierdzenia."
+
+#. module: cyfr_pos_shift_handover
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_shift_handover.view_pos_shift_handover_form
+msgid "Sessions"
+msgstr "Sesje"
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_shift_handover.view_pos_shift_handover_form
+msgid "Shift Handover"
+msgstr "Przekazanie zmiany"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.actions.act_window,name:cyfr_pos_shift_handover.action_pos_shift_handover
+#: model:ir.ui.menu,name:cyfr_pos_shift_handover.menu_pos_shift_handover
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_shift_handover.view_pos_shift_handover_list
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_shift_handover.view_pos_shift_handover_search
+msgid "Shift Handovers"
+msgstr "Przekazania zmian"
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "Shift handovers are retained for audit and cannot be deleted."
+msgstr "Przekazania zmian są zachowywane do audytu i nie można ich usunąć."
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover__state
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover_task__state
+msgid "State"
+msgstr "Stan"
+
+#. module: cyfr_pos_shift_handover
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_shift_handover.view_pos_shift_handover_search
+msgid "Status"
+msgstr "Status"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover_task__title
+msgid "Task"
+msgstr "Zadanie"
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "Task owner must be a POS user with access to the handover company."
+msgstr "Właściciel zadania musi być użytkownikiem POS z dostępem do firmy przekazania."
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields,field_description:cyfr_pos_shift_handover.field_cyfr_pos_handover__task_ids
+msgid "Tasks"
+msgstr "Zadania"
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid ""
+"The incoming session must be a later regular session on the same register "
+"and company."
+msgstr "Sesja przychodząca musi być późniejszą zwykłą sesją na tym samym stanowisku i w tej samej firmie."
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "The incoming session must open after the outgoing session closed."
+msgstr "Sesja przychodząca musi otworzyć się po zamknięciu sesji wychodzącej."
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "The linked handover is no longer readable."
+msgstr "Powiązane przekazanie nie jest już dostępne do odczytu."
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "The outgoing session is outside your allowed scope or has not opened."
+msgstr "Sesja wychodząca jest poza Twoim zakresem dostępu lub nie została otwarta."
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid ""
+"The receiving session must be later and on the same register and company."
+msgstr "Sesja przyjmująca musi być późniejsza i należeć do tego samego stanowiska oraz firmy."
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "This handover belongs to another company."
+msgstr "To przekazanie należy do innej firmy."
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "This handover has already been acknowledged by another user."
+msgstr "Inny użytkownik potwierdził już odbiór tego przekazania."
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "This handover has already been claimed by another user."
+msgstr "Inny użytkownik przejął już to przekazanie."
+
+#. module: cyfr_pos_shift_handover
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_shift_handover.view_pos_shift_handover_task_search
+msgid "Unassigned"
+msgstr "Bez właściciela"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields.selection,name:cyfr_pos_shift_handover.selection__cyfr_pos_handover__state__unclaimed
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_shift_handover.view_pos_shift_handover_search
+msgid "Unclaimed"
+msgstr "Nieprzejęte"
+
+#. module: cyfr_pos_shift_handover
+#: model:ir.model.fields.selection,name:cyfr_pos_shift_handover.selection__cyfr_pos_handover_task__priority__urgent
+msgid "Urgent"
+msgstr "Pilny"
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/pos_session.py:0
+msgid "config_id"
+msgstr "Stanowisko POS"
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/handover.py:0
+msgid "handover_id"
+msgstr "Przekazanie"
+
+#. module: cyfr_pos_shift_handover
+#. odoo-python
+#: code:addons/cyfr_pos_shift_handover/models/pos_session.py:0
+msgid "source_session_id"
+msgstr "Sesja wychodząca"
