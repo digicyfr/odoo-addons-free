@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_refund_case_user,refund evidence case user,model_cyfr_pos_refund_case,point_of_sale.group_pos_user,1,1,0,0
+access_refund_case_manager,refund evidence case manager,model_cyfr_pos_refund_case,point_of_sale.group_pos_manager,1,1,0,0
+access_refund_reason_user,refund reason user,model_cyfr_pos_refund_reason,point_of_sale.group_pos_user,1,0,0,0
+access_refund_reason_manager,refund reason manager,model_cyfr_pos_refund_reason,point_of_sale.group_pos_manager,1,1,1,1

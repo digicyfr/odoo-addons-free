@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_refund_case_list" model="ir.ui.view">
+        <field name="name">cyfr.pos.refund.case.list</field>
+        <field name="model">cyfr.pos.refund.case</field>
+        <field name="arch" type="xml">
+            <list string="Refund Evidence" create="false" delete="false" edit="false">
+                <field name="state" decoration-warning="state == 'incomplete'" decoration-success="state == 'complete'"/>
+                <field name="refund_date"/>
+                <field name="refund_order_id"/>
+                <field name="config_id"/>
+                <field name="order_user_id"/>
+                <field name="reason_id"/>
+                <field name="recorded_by_id"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_refund_case_form" model="ir.ui.view">
+        <field name="name">cyfr.pos.refund.case.form</field>
+        <field name="model">cyfr.pos.refund.case</field>
+        <field name="arch" type="xml">
+            <form string="Refund Evidence" create="false" delete="false" duplicate="false">
+                <header><field name="state" widget="statusbar" statusbar_visible="incomplete,complete"/></header>
+                <sheet>
+                    <field name="company_id" invisible="1"/>
+                    <div class="oe_title"><h1><field name="refund_order_id" readonly="1"/></h1></div>
+                    <div class="alert alert-info" role="alert">
+                        Evidence is a review record. Refund payment, tax, stock and accounting remain native to Odoo. The POS order user may be a shared login and may differ from the person who recorded this evidence.
+                    </div>
+                    <group>
+                        <group>
+                            <field name="refund_date"/>
+                            <field name="config_id"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                            <field name="order_user_id"/>
+                        </group>
+                        <group>
+                            <field name="reason_id" domain="[('company_id', '=', company_id), ('active', '=', True)]" options="{'no_create': True, 'no_open': True}"/>
+                            <field name="recorded_by_id"/>
+                            <field name="captured_at"/>
+                            <field name="origin_order_count"/>
+                        </group>
+                    </group>
+                    <group><field name="condition_note" placeholder="Describe the returned goods without customer personal data."/></group>
+                    <group groups="point_of_sale.group_pos_manager"><field name="manager_note"/></group>
+                    <button name="action_open_origins" type="object" string="Open Original Sales" invisible="not origin_order_count"/>
+                    <notebook>
+                        <page string="Refund Lines and Origins">
+                            <field name="refund_line_ids" readonly="1">
+                                <list create="false" edit="false" delete="false">
+                                    <field name="product_id"/>
+                                    <field name="qty"/>
+                                    <field name="refunded_orderline_id" string="Original Sale Line"/>
+                                    <field name="cyfr_original_order_id"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_refund_case_search" model="ir.ui.view">
+        <field name="name">cyfr.pos.refund.case.search</field>
+        <field name="model">cyfr.pos.refund.case</field>
+        <field name="arch" type="xml">
+            <search string="Refund Evidence">
+                <field name="refund_order_id"/>
+                <field name="reason_id"/>
+                <field name="config_id"/>
+                <filter name="incomplete" string="Incomplete" domain="[('state', '=', 'incomplete')]"/>
+                <filter name="complete" string="Complete" domain="[('state', '=', 'complete')]"/>
+                <group>
+                    <filter name="group_reason" string="Reason" context="{'group_by': 'reason_id'}"/>
+                    <filter name="group_config" string="Point of Sale" context="{'group_by': 'config_id'}"/>
+                    <filter name="group_day" string="Refund Date" context="{'group_by': 'refund_date:day'}"/>
+                    <filter name="group_company" string="Company" context="{'group_by': 'company_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+    <record id="action_refund_case" model="ir.actions.act_window">
+        <field name="name">Refund Evidence</field>
+        <field name="res_model">cyfr.pos.refund.case</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'search_default_incomplete': 1}</field>
+    </record>
+    <record id="action_refund_reason" model="ir.actions.act_window">
+        <field name="name">Refund Reasons</field>
+        <field name="res_model">cyfr.pos.refund.reason</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <menuitem id="menu_refund_case" name="Refund Evidence" parent="point_of_sale.menu_point_of_sale" action="action_refund_case" sequence="45" groups="point_of_sale.group_pos_user"/>
+    <menuitem id="menu_refund_reason" name="Refund Reasons" parent="point_of_sale.menu_point_config_product" action="action_refund_reason" sequence="45" groups="point_of_sale.group_pos_manager"/>
+</odoo>

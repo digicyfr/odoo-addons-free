@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="reason_damaged" model="cyfr.pos.refund.reason">
+        <field name="name">Damaged packaging</field>
+        <field name="code">DAMAGED_PACKAGING</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+    <record id="reason_wrong_item" model="cyfr.pos.refund.reason">
+        <field name="name">Wrong item</field>
+        <field name="code">WRONG_ITEM</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+    <record id="reason_changed_mind" model="cyfr.pos.refund.reason">
+        <field name="name">Changed mind</field>
+        <field name="code">CHANGED_MIND</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+</odoo>

@@ -1,0 +1,322 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* cyfr_pos_refund_evidence
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0-20260908\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-05 05:43+0000\n"
+"PO-Revision-Date: 2026-11-05 05:43+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. module: cyfr_pos_refund_evidence
+#. odoo-python
+#: code:addons/cyfr_pos_refund_evidence/models/refund_evidence.py:0
+msgid "A reason already used in evidence cannot change company."
+msgstr "Powodu użytego w ewidencji nie można przenieść do innej firmy."
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_reason__active
+msgid "Active"
+msgstr "Aktywny"
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_case__captured_at
+msgid "Captured At"
+msgstr "Zarejestrowano"
+
+#. module: cyfr_pos_refund_evidence
+#: model:cyfr.pos.refund.reason,name:cyfr_pos_refund_evidence.reason_changed_mind
+msgid "Changed mind"
+msgstr "Zmiana decyzji"
+
+#. module: cyfr_pos_refund_evidence
+#. odoo-python
+#: code:addons/cyfr_pos_refund_evidence/models/refund_evidence.py:0
+msgid "Choose an active reason from the refund company."
+msgstr "Wybierz aktywny powód z firmy, do której należy zwrot."
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_reason__code
+msgid "Code"
+msgstr "Kod"
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_case__company_id
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_reason__company_id
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_refund_evidence.view_refund_case_search
+msgid "Company"
+msgstr "Firma"
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.fields.selection,name:cyfr_pos_refund_evidence.selection__cyfr_pos_refund_case__state__complete
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_refund_evidence.view_refund_case_search
+msgid "Complete"
+msgstr "Kompletne"
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_case__condition_note
+msgid "Condition Note"
+msgstr "Opis stanu towaru"
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_case__create_uid
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_reason__create_uid
+msgid "Created by"
+msgstr "Utworzone przez"
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_case__create_date
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_reason__create_date
+msgid "Created on"
+msgstr "Utworzono"
+
+#. module: cyfr_pos_refund_evidence
+#: model:cyfr.pos.refund.reason,name:cyfr_pos_refund_evidence.reason_damaged
+msgid "Damaged packaging"
+msgstr "Uszkodzone opakowanie"
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_case__refund_date
+msgid "Date"
+msgstr "Data"
+
+#. module: cyfr_pos_refund_evidence
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_refund_evidence.view_refund_case_form
+msgid "Describe the returned goods without customer personal data."
+msgstr "Opisz zwrócony towar bez danych osobowych klienta."
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.fields,help:cyfr_pos_refund_evidence.field_cyfr_pos_refund_case__condition_note
+msgid ""
+"Describe the returned goods; do not enter sensitive customer information."
+msgstr "Opisz zwrócony towar; nie wpisuj wrażliwych danych klienta."
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_case__display_name
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_reason__display_name
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_pos_order__display_name
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_pos_order_line__display_name
+msgid "Display Name"
+msgstr "Nazwa wyświetlana"
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.fields,help:cyfr_pos_refund_evidence.field_cyfr_pos_refund_case__order_user_id
+msgid "Employee who uses the cash register."
+msgstr "Użytkownik konta obsługującego kasę."
+
+#. module: cyfr_pos_refund_evidence
+#. odoo-python
+#: code:addons/cyfr_pos_refund_evidence/models/refund_evidence.py:0
+msgid "Evidence cases require a native refund order."
+msgstr "Przypadki ewidencji wymagają natywnego zamówienia zwrotu POS."
+
+#. module: cyfr_pos_refund_evidence
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_refund_evidence.view_refund_case_form
+msgid ""
+"Evidence is a review record. Refund payment, tax, stock and accounting "
+"remain native to Odoo. The POS order user may be a shared login and may "
+"differ from the person who recorded this evidence."
+msgstr "Ewidencja służy do przeglądu zwrotu. Płatność, podatki, stany magazynowe i księgowość zwrotu obsługuje Odoo. Konto użytkownika zamówienia POS może być współdzielone i różnić się od osoby, która zapisała tę ewidencję."
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_case__id
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_reason__id
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_pos_order__id
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_pos_order_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.fields.selection,name:cyfr_pos_refund_evidence.selection__cyfr_pos_refund_case__state__incomplete
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_refund_evidence.view_refund_case_search
+msgid "Incomplete"
+msgstr "Niekompletne"
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_case__write_uid
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_reason__write_uid
+msgid "Last Updated by"
+msgstr "Ostatnio zmienione przez"
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_case__write_date
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_reason__write_date
+msgid "Last Updated on"
+msgstr "Ostatnia zmiana"
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_case__manager_note
+msgid "Manager Note"
+msgstr "Notatka kierownika"
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_reason__name
+msgid "Name"
+msgstr "Nazwa"
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.constraint,message:cyfr_pos_refund_evidence.constraint_cyfr_pos_refund_case_refund_unique
+msgid "Only one evidence case is allowed per refund order."
+msgstr "Do jednego zamówienia zwrotu można przypisać tylko jeden przypadek ewidencji."
+
+#. module: cyfr_pos_refund_evidence
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_refund_evidence.view_refund_case_form
+msgid "Open Original Sales"
+msgstr "Otwórz pierwotne sprzedaże"
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_case__origin_order_count
+msgid "Origin Order Count"
+msgstr "Liczba zamówień źródłowych"
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_pos_order_line__cyfr_original_order_id
+msgid "Original Sale"
+msgstr "Pierwotna sprzedaż"
+
+#. module: cyfr_pos_refund_evidence
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_refund_evidence.view_refund_case_form
+msgid "Original Sale Line"
+msgstr "Pozycja pierwotnej sprzedaży"
+
+#. module: cyfr_pos_refund_evidence
+#. odoo-python
+#: code:addons/cyfr_pos_refund_evidence/models/refund_evidence.py:0
+msgid "Original Sales"
+msgstr "Pierwotne sprzedaże"
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_case__order_user_id
+msgid "POS Order User"
+msgstr "Użytkownik zamówienia POS"
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model,name:cyfr_pos_refund_evidence.model_cyfr_pos_refund_case
+msgid "POS Refund Evidence Case"
+msgstr "Przypadek ewidencji zwrotu POS"
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model,name:cyfr_pos_refund_evidence.model_cyfr_pos_refund_reason
+msgid "POS Refund Reason"
+msgstr "Powód zwrotu POS"
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_case__config_id
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_refund_evidence.view_refund_case_search
+msgid "Point of Sale"
+msgstr "Punkt sprzedaży"
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model,name:cyfr_pos_refund_evidence.model_pos_order_line
+msgid "Point of Sale Order Lines"
+msgstr "Pozycje zamówień POS"
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model,name:cyfr_pos_refund_evidence.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Zamówienia POS"
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_case__reason_id
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_refund_evidence.view_refund_case_search
+msgid "Reason"
+msgstr "Powód"
+
+#. module: cyfr_pos_refund_evidence
+#. odoo-python
+#: code:addons/cyfr_pos_refund_evidence/models/refund_evidence.py:0
+msgid "Reason code must be nonempty and have no outer spaces."
+msgstr "Kod powodu nie może być pusty ani mieć spacji na początku lub końcu."
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.constraint,message:cyfr_pos_refund_evidence.constraint_cyfr_pos_refund_reason_code_company_unique
+msgid "Reason code must be unique within a company."
+msgstr "Kod powodu musi być unikalny w obrębie firmy."
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_case__recorded_by_id
+msgid "Recorded By"
+msgstr "Zapisane przez"
+
+#. module: cyfr_pos_refund_evidence
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_refund_evidence.view_refund_case_search
+msgid "Refund Date"
+msgstr "Data zwrotu"
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.actions.act_window,name:cyfr_pos_refund_evidence.action_refund_case
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_pos_order__refund_evidence_case_id
+#: model:ir.ui.menu,name:cyfr_pos_refund_evidence.menu_refund_case
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_refund_evidence.view_refund_case_form
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_refund_evidence.view_refund_case_list
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_refund_evidence.view_refund_case_search
+msgid "Refund Evidence"
+msgstr "Ewidencja zwrotów POS"
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_case__refund_line_ids
+msgid "Refund Lines"
+msgstr "Pozycje zwrotu"
+
+#. module: cyfr_pos_refund_evidence
+#: model_terms:ir.ui.view,arch_db:cyfr_pos_refund_evidence.view_refund_case_form
+msgid "Refund Lines and Origins"
+msgstr "Pozycje zwrotu i źródła"
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_case__refund_order_id
+msgid "Refund Order"
+msgstr "Zamówienie zwrotu"
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.actions.act_window,name:cyfr_pos_refund_evidence.action_refund_reason
+#: model:ir.ui.menu,name:cyfr_pos_refund_evidence.menu_refund_reason
+msgid "Refund Reasons"
+msgstr "Powody zwrotów"
+
+#. module: cyfr_pos_refund_evidence
+#. odoo-python
+#: code:addons/cyfr_pos_refund_evidence/models/refund_evidence.py:0
+msgid "Refund evidence: %s"
+msgstr "Ewidencja zwrotu: %s"
+
+#. module: cyfr_pos_refund_evidence
+#. odoo-python
+#: code:addons/cyfr_pos_refund_evidence/models/refund_evidence.py:0
+msgid "Refund provenance and capture metadata cannot be edited."
+msgstr "Nie można zmieniać pochodzenia zwrotu ani metadanych zapisu ewidencji."
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_reason__sequence
+msgid "Sequence"
+msgstr "Kolejność"
+
+#. module: cyfr_pos_refund_evidence
+#: model:ir.model.fields,field_description:cyfr_pos_refund_evidence.field_cyfr_pos_refund_case__state
+msgid "State"
+msgstr "Stan"
+
+#. module: cyfr_pos_refund_evidence
+#: model:cyfr.pos.refund.reason,name:cyfr_pos_refund_evidence.reason_wrong_item
+msgid "Wrong item"
+msgstr "Niewłaściwy towar"
+
+#. module: cyfr_pos_refund_evidence
+#. odoo-python
+#: code:addons/cyfr_pos_refund_evidence/models/refund_evidence.py:0
+msgid "You cannot move a refund reason to a company you cannot access."
+msgstr "Nie możesz przenieść powodu zwrotu do firmy, do której nie masz dostępu."
+
+#. module: cyfr_pos_refund_evidence
+#. odoo-python
+#: code:addons/cyfr_pos_refund_evidence/models/refund_evidence.py:0
+msgid "id"
+msgstr "id"
