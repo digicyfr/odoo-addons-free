@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_lot_expiry_entry_user,lot.expiry.entry.user,model_cyfr_lot_expiry_entry,stock.group_stock_user,1,0,0,0
+access_lot_expiry_scan_manager,lot.expiry.scan.manager,model_cyfr_lot_expiry_scan,stock.group_stock_manager,1,1,1,1
+access_lot_expiry_assign_manager,lot.expiry.assign.manager,model_cyfr_lot_expiry_assign,stock.group_stock_manager,1,1,1,1

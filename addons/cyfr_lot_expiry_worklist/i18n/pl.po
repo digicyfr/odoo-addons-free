@@ -1,0 +1,622 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* cyfr_lot_expiry_worklist
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0-20260908\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-05 05:18+0000\n"
+"PO-Revision-Date: 2026-11-05 05:18+0000\n"
+"Language: pl_PL\n"
+"Last-Translator: Cyfr Sp. z o.o.\n"
+"Language-Team: Polish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+#. module: cyfr_lot_expiry_worklist
+#. odoo-python
+#: code:addons/cyfr_lot_expiry_worklist/models/expiry_entry.py:0
+msgid "A linked stock record is no longer readable."
+msgstr "Powiązany rekord zapasu nie jest już dostępny do odczytu."
+
+#. module: cyfr_lot_expiry_worklist
+#: model_terms:ir.ui.view,arch_db:cyfr_lot_expiry_worklist.view_lot_expiry_entry_form
+msgid "Acknowledge"
+msgstr "Potwierdź"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields.selection,name:cyfr_lot_expiry_worklist.selection__cyfr_lot_expiry_entry__status__acknowledged
+#: model_terms:ir.ui.view,arch_db:cyfr_lot_expiry_worklist.view_lot_expiry_entry_search
+msgid "Acknowledged"
+msgstr "Potwierdzone"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__acknowledged_at
+msgid "Acknowledged At"
+msgstr "Potwierdzono dnia"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__acknowledged_by
+msgid "Acknowledged By"
+msgstr "Potwierdzone przez"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__message_needaction
+msgid "Action Needed"
+msgstr "Wymagane działanie"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_assign__action_note
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__action_note
+msgid "Action Note"
+msgstr "Notatka do zadania"
+
+#. module: cyfr_lot_expiry_worklist
+#: model_terms:ir.ui.view,arch_db:cyfr_lot_expiry_worklist.view_lot_expiry_entry_form
+msgid "Action and Acknowledgment"
+msgstr "Zadanie i potwierdzenie"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__alert_date
+msgid "Alert Date"
+msgstr "Data alertu"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.constraint,message:cyfr_lot_expiry_worklist.constraint_cyfr_lot_expiry_entry_key_unique
+msgid "An action already exists for this lot, location and stock owner."
+msgstr "Zadanie dla tej partii, lokalizacji i właściciela zapasu już istnieje."
+
+#. module: cyfr_lot_expiry_worklist
+#: model_terms:ir.ui.view,arch_db:cyfr_lot_expiry_worklist.view_lot_expiry_assign_form
+msgid "Assign"
+msgstr "Przypisz"
+
+#. module: cyfr_lot_expiry_worklist
+#: model_terms:ir.ui.view,arch_db:cyfr_lot_expiry_worklist.view_lot_expiry_entry_form
+msgid "Assign Action"
+msgstr "Przypisz zadanie"
+
+#. module: cyfr_lot_expiry_worklist
+#. odoo-python
+#: code:addons/cyfr_lot_expiry_worklist/models/expiry_entry.py:0
+#: model_terms:ir.ui.view,arch_db:cyfr_lot_expiry_worklist.view_lot_expiry_assign_form
+msgid "Assign Lot Action"
+msgstr "Przypisz zadanie dla partii"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model,name:cyfr_lot_expiry_worklist.model_cyfr_lot_expiry_assign
+msgid "Assign Lot Expiry Action"
+msgstr "Przypisz zadanie dotyczące terminu ważności partii"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields.selection,name:cyfr_lot_expiry_worklist.selection__cyfr_lot_expiry_entry__status__assigned
+msgid "Assigned"
+msgstr "Przypisane"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__message_attachment_count
+msgid "Attachment Count"
+msgstr "Liczba załączników"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__use_date
+msgid "Best Before Date"
+msgstr "Najlepiej spożyć przed"
+
+#. module: cyfr_lot_expiry_worklist
+#: model_terms:ir.ui.view,arch_db:cyfr_lot_expiry_worklist.view_lot_expiry_assign_form
+#: model_terms:ir.ui.view,arch_db:cyfr_lot_expiry_worklist.view_lot_expiry_scan_form
+msgid "Cancel"
+msgstr "Anuluj"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__company_id
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_scan__company_id
+msgid "Company"
+msgstr "Firma"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_assign__create_uid
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__create_uid
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_scan__create_uid
+msgid "Created by"
+msgstr "Utworzone przez"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_assign__create_date
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__create_date
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_scan__create_date
+msgid "Created on"
+msgstr "Utworzono dnia"
+
+#. module: cyfr_lot_expiry_worklist
+#. odoo-python
+#: code:addons/cyfr_lot_expiry_worklist/models/expiry_entry.py:0
+#: model_terms:ir.ui.view,arch_db:cyfr_lot_expiry_worklist.view_lot_expiry_entry_form
+msgid "Current Quants"
+msgstr "Bieżące kwanty"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:product.template,name:cyfr_lot_expiry_worklist.demo_product_product_template
+msgid "Demo Chilled Goods"
+msgstr "Towar chłodzony"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_assign__display_name
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__display_name
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_scan__display_name
+msgid "Display Name"
+msgstr "Nazwa wyświetlana"
+
+#. module: cyfr_lot_expiry_worklist
+#. odoo-python
+#: code:addons/cyfr_lot_expiry_worklist/wizard/assign_wizard.py:0
+msgid "Enter a next action."
+msgstr "Wpisz następne działanie."
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_assign__entry_id
+msgid "Entry"
+msgstr "Pozycja"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__expiration_date
+msgid "Expiration Date"
+msgstr "Data ważności"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields.selection,name:cyfr_lot_expiry_worklist.selection__cyfr_lot_expiry_entry__expiry_state__expired
+msgid "Expired"
+msgstr "Przeterminowane"
+
+#. module: cyfr_lot_expiry_worklist
+#: model_terms:ir.ui.view,arch_db:cyfr_lot_expiry_worklist.view_lot_expiry_entry_search
+msgid "Expired at Last Scan"
+msgstr "Przeterminowane podczas ostatniego skanu"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__expiry_state
+msgid "Expiry State"
+msgstr "Stan ważności"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__message_follower_ids
+msgid "Followers"
+msgstr "Obserwujący"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Obserwujący (partnerzy)"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__has_message
+msgid "Has Message"
+msgstr "Ma wiadomość"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_scan__horizon_days
+msgid "Horizon Days"
+msgstr "Horyzont w dniach"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_assign__id
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__id
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_scan__id
+msgid "ID"
+msgstr "ID"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,help:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Zaznaczenie oznacza, że nowe wiadomości wymagają uwagi."
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,help:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__message_has_error
+#: model:ir.model.fields,help:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Zaznaczenie oznacza błąd dostarczenia niektórych wiadomości."
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,help:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_scan__horizon_days
+msgid "Include lots expiring now or within this many 24-hour periods (UTC)."
+msgstr "Uwzględnij partie, których termin ważności już minął lub upływa w ciągu tej liczby okresów 24-godzinnych (UTC)."
+
+#. module: cyfr_lot_expiry_worklist
+#. odoo-python
+#: code:addons/cyfr_lot_expiry_worklist/models/expiry_entry.py:0
+msgid "Inventory access is required."
+msgstr "Wymagany jest dostęp do magazynu."
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__message_is_follower
+msgid "Is Follower"
+msgstr "Obserwuje"
+
+#. module: cyfr_lot_expiry_worklist
+#: model_terms:ir.ui.view,arch_db:cyfr_lot_expiry_worklist.view_lot_expiry_entry_form
+msgid "Last Scan Snapshot"
+msgstr "Migawka ostatniego skanu"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_assign__write_uid
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__write_uid
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_scan__write_uid
+msgid "Last Updated by"
+msgstr "Ostatnio zmienione przez"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_assign__write_date
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__write_date
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_scan__write_date
+msgid "Last Updated on"
+msgstr "Ostatnio zmieniono dnia"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__location_id
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_scan__location_id
+#: model_terms:ir.ui.view,arch_db:cyfr_lot_expiry_worklist.view_lot_expiry_entry_search
+msgid "Location"
+msgstr "Lokalizacja"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__lot_id
+msgid "Lot"
+msgstr "Partia"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.ui.menu,name:cyfr_lot_expiry_worklist.menu_lot_expiry_root
+msgid "Lot Expiry"
+msgstr "Terminy ważności partii"
+
+#. module: cyfr_lot_expiry_worklist
+#. odoo-python
+#: code:addons/cyfr_lot_expiry_worklist/models/expiry_entry.py:0
+#: model_terms:ir.ui.view,arch_db:cyfr_lot_expiry_worklist.view_lot_expiry_entry_form
+msgid "Lot Expiry Action"
+msgstr "Zadanie dotyczące terminu ważności partii"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model,name:cyfr_lot_expiry_worklist.model_cyfr_lot_expiry_entry
+msgid "Lot Expiry Location Action"
+msgstr "Zadanie dla partii w lokalizacji"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model,name:cyfr_lot_expiry_worklist.model_cyfr_lot_expiry_scan
+msgid "Lot Expiry Scan"
+msgstr "Skan terminów ważności partii"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.actions.act_window,name:cyfr_lot_expiry_worklist.action_lot_expiry_entry
+#: model_terms:ir.ui.view,arch_db:cyfr_lot_expiry_worklist.view_lot_expiry_entry_list
+#: model_terms:ir.ui.view,arch_db:cyfr_lot_expiry_worklist.view_lot_expiry_entry_pivot
+msgid "Lot Expiry Worklist"
+msgstr "Lista zadań dla terminów ważności partii"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__message_has_error
+msgid "Message Delivery error"
+msgstr "Błąd dostarczenia wiadomości"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__message_ids
+msgid "Messages"
+msgstr "Wiadomości"
+
+#. module: cyfr_lot_expiry_worklist
+#. odoo-python
+#: code:addons/cyfr_lot_expiry_worklist/wizard/scan_wizard.py:0
+msgid ""
+"More than 1,000 lot positions match. Select a narrower internal location."
+msgstr "Pasuje ponad 1000 pozycji partii. Wybierz węższą lokalizację wewnętrzną."
+
+#. module: cyfr_lot_expiry_worklist
+#. odoo-python
+#: code:addons/cyfr_lot_expiry_worklist/wizard/scan_wizard.py:0
+msgid ""
+"More than 1,000 prior actions match. Select a narrower internal location."
+msgstr "Pasuje ponad 1000 wcześniejszych zadań. Wybierz węższą lokalizację wewnętrzną."
+
+#. module: cyfr_lot_expiry_worklist
+#. odoo-python
+#: code:addons/cyfr_lot_expiry_worklist/wizard/scan_wizard.py:0
+msgid "More than 5,000 lot quants match. Select a narrower internal location."
+msgstr "Pasuje ponad 5000 kwantów partii. Wybierz węższą lokalizację wewnętrzną."
+
+#. module: cyfr_lot_expiry_worklist
+#: model_terms:ir.ui.view,arch_db:cyfr_lot_expiry_worklist.view_lot_expiry_entry_form
+msgid "Native Lot Dates"
+msgstr "Daty partii w Odoo"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,help:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__alert_date
+msgid "Native Odoo alert threshold, shown for context only."
+msgstr "Standardowy próg alertu Odoo, pokazany tylko jako kontekst."
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_assign__next_action
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__next_action
+msgid "Next Action"
+msgstr "Następne działanie"
+
+#. module: cyfr_lot_expiry_worklist
+#: model_terms:ir.ui.view,arch_db:cyfr_lot_expiry_worklist.view_lot_expiry_entry_search
+msgid "No Longer Present"
+msgstr "Brak zapasu w lokalizacji"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Liczba działań"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__message_has_error_counter
+msgid "Number of errors"
+msgstr "Liczba błędów"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,help:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Liczba wiadomości wymagających działania"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,help:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Liczba wiadomości z błędem dostarczenia"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__observed_at
+msgid "Observed At"
+msgstr "Zaobserwowano dnia"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__on_hand
+msgid "On Hand"
+msgstr "Stan na ręku"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,help:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__physical_unreserved
+msgid ""
+"On hand minus reserved. Odoo's native available quantity may be zero after "
+"the removal date."
+msgstr "Stan na ręku minus rezerwacje. Standardowa dostępna ilość Odoo może wynosić zero po dacie usunięcia."
+
+#. module: cyfr_lot_expiry_worklist
+#: model_terms:ir.ui.view,arch_db:cyfr_lot_expiry_worklist.view_lot_expiry_scan_form
+msgid ""
+"One bounded scan checks at most 5,000 lot quants and 1,000 lot positions, "
+"including prior actions. If either limit is exceeded, the scan stops without"
+" changing the worklist; select a narrower location. The horizon compares the"
+" lot's expiration timestamp with current UTC time."
+msgstr "Jeden ograniczony skan sprawdza najwyżej 5000 kwantów partii i 1000 pozycji partii, w tym wcześniejsze zadania. Po przekroczeniu któregokolwiek limitu skan kończy się bez zmiany listy zadań; wybierz węższą lokalizację. Horyzont porównuje datę i godzinę ważności partii z bieżącym czasem UTC."
+
+#. module: cyfr_lot_expiry_worklist
+#. odoo-python
+#: code:addons/cyfr_lot_expiry_worklist/models/expiry_entry.py:0
+msgid "Only an assigned action can be acknowledged."
+msgstr "Można potwierdzić tylko przypisane zadanie."
+
+#. module: cyfr_lot_expiry_worklist
+#. odoo-python
+#: code:addons/cyfr_lot_expiry_worklist/models/expiry_entry.py:0
+#: code:addons/cyfr_lot_expiry_worklist/wizard/assign_wizard.py:0
+msgid "Only an inventory administrator may assign this action."
+msgstr "Tylko administrator magazynu może przypisać to zadanie."
+
+#. module: cyfr_lot_expiry_worklist
+#. odoo-python
+#: code:addons/cyfr_lot_expiry_worklist/wizard/scan_wizard.py:0
+msgid "Only an inventory administrator may scan expiry actions."
+msgstr "Tylko administrator magazynu może skanować terminy ważności."
+
+#. module: cyfr_lot_expiry_worklist
+#. odoo-python
+#: code:addons/cyfr_lot_expiry_worklist/models/expiry_entry.py:0
+msgid ""
+"Only the responsible user or an inventory administrator may acknowledge."
+msgstr "Tylko osoba odpowiedzialna lub administrator magazynu może potwierdzić zadanie."
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields.selection,name:cyfr_lot_expiry_worklist.selection__cyfr_lot_expiry_entry__status__open
+msgid "Open"
+msgstr "Otwarte"
+
+#. module: cyfr_lot_expiry_worklist
+#: model_terms:ir.ui.view,arch_db:cyfr_lot_expiry_worklist.view_lot_expiry_entry_form
+msgid "Open Native Lot"
+msgstr "Otwórz partię w Odoo"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields.selection,name:cyfr_lot_expiry_worklist.selection__cyfr_lot_expiry_entry__expiry_state__outside_horizon
+msgid "Outside Last Horizon"
+msgstr "Poza ostatnim horyzontem"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__owner_key
+msgid "Owner Key"
+msgstr "Klucz właściciela"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__physical_unreserved
+msgid "Physical Unreserved"
+msgstr "Fizycznie niezarezerwowane"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,help:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__on_hand
+msgid "Physical quantity in the product's base unit at the last scan."
+msgstr "Fizyczna ilość w podstawowej jednostce produktu podczas ostatniego skanu."
+
+#. module: cyfr_lot_expiry_worklist
+#: model_terms:ir.ui.view,arch_db:cyfr_lot_expiry_worklist.view_lot_expiry_entry_form
+msgid ""
+"Physical unreserved is on hand minus reserved at the last scan. Native "
+"available quantity can be zero after the removal date. This action does not "
+"move or scrap stock."
+msgstr "Fizycznie niezarezerwowana ilość to stan na ręku minus rezerwacje podczas ostatniego skanu. Standardowa dostępna ilość może wynosić zero po dacie usunięcia. To zadanie nie przenosi ani nie likwiduje zapasu."
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,help:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__stock_present
+msgid "Positive net on-hand quantity at the last scan."
+msgstr "Dodatnia ilość netto na ręku podczas ostatniego skanu."
+
+#. module: cyfr_lot_expiry_worklist
+#: model_terms:ir.ui.view,arch_db:cyfr_lot_expiry_worklist.view_lot_expiry_entry_search
+msgid "Present at Last Scan"
+msgstr "Zapas obecny podczas ostatniego skanu"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__product_id
+msgid "Product"
+msgstr "Produkt"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__removal_date
+msgid "Removal Date"
+msgstr "Data usunięcia"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__reserved
+msgid "Reserved"
+msgstr "Zarezerwowane"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,help:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__reserved
+msgid "Reserved quantity at the last scan."
+msgstr "Ilość zarezerwowana podczas ostatniego skanu."
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_assign__assigned_user_id
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__assigned_user_id
+#: model_terms:ir.ui.view,arch_db:cyfr_lot_expiry_worklist.view_lot_expiry_entry_search
+msgid "Responsible User"
+msgstr "Odpowiedzialny"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Błąd dostarczenia SMS"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.ui.menu,name:cyfr_lot_expiry_worklist.menu_lot_expiry_scan
+#: model_terms:ir.ui.view,arch_db:cyfr_lot_expiry_worklist.view_lot_expiry_scan_form
+msgid "Scan"
+msgstr "Skanuj"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__scan_horizon_days
+msgid "Scan Horizon Days"
+msgstr "Horyzont skanu w dniach"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.actions.act_window,name:cyfr_lot_expiry_worklist.action_lot_expiry_scan
+#: model_terms:ir.ui.view,arch_db:cyfr_lot_expiry_worklist.view_lot_expiry_scan_form
+msgid "Scan Lot Expiry"
+msgstr "Skanuj terminy ważności partii"
+
+#. module: cyfr_lot_expiry_worklist
+#: model_terms:ir.ui.view,arch_db:cyfr_lot_expiry_worklist.view_lot_expiry_entry_search
+msgid "Search Lot Expiry Actions"
+msgstr "Szukaj zadań dotyczących terminów ważności partii"
+
+#. module: cyfr_lot_expiry_worklist
+#. odoo-python
+#: code:addons/cyfr_lot_expiry_worklist/wizard/scan_wizard.py:0
+msgid "Select an active company-owned internal location."
+msgstr "Wybierz aktywną lokalizację wewnętrzną należącą do firmy."
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__status
+msgid "Status"
+msgstr "Stan"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__owner_id
+#: model_terms:ir.ui.view,arch_db:cyfr_lot_expiry_worklist.view_lot_expiry_entry_search
+msgid "Stock Owner"
+msgstr "Właściciel"
+
+#. module: cyfr_lot_expiry_worklist
+#: model_terms:ir.ui.view,arch_db:cyfr_lot_expiry_worklist.view_lot_expiry_entry_form
+msgid "Stock Position"
+msgstr "Pozycja zapasu"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__stock_present
+msgid "Stock Present"
+msgstr "Zapas obecny"
+
+#. module: cyfr_lot_expiry_worklist
+#. odoo-python
+#: code:addons/cyfr_lot_expiry_worklist/wizard/scan_wizard.py:0
+msgid "The expiry horizon must be between 0 and 365 days."
+msgstr "Horyzont terminu ważności musi wynosić od 0 do 365 dni."
+
+#. module: cyfr_lot_expiry_worklist
+#. odoo-python
+#: code:addons/cyfr_lot_expiry_worklist/models/expiry_entry.py:0
+msgid ""
+"The lot, product, location, owner and company must describe one stock "
+"position."
+msgstr "Partia, produkt, lokalizacja, właściciel i firma muszą opisywać jedną pozycję zapasu."
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,help:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__expiration_date
+msgid "The only date used for expiry and horizon decisions."
+msgstr "Jedyna data używana do oceny ważności i horyzontu."
+
+#. module: cyfr_lot_expiry_worklist
+#. odoo-python
+#: code:addons/cyfr_lot_expiry_worklist/wizard/assign_wizard.py:0
+msgid "The responsible user must be an active inventory user in this company."
+msgstr "Osoba odpowiedzialna musi być aktywnym użytkownikiem magazynu w tej firmie."
+
+#. module: cyfr_lot_expiry_worklist
+#. odoo-python
+#: code:addons/cyfr_lot_expiry_worklist/wizard/scan_wizard.py:0
+msgid "The scan company must be active for your user."
+msgstr "Firma skanowania musi być aktywna dla tego użytkownika."
+
+#. module: cyfr_lot_expiry_worklist
+#. odoo-python
+#: code:addons/cyfr_lot_expiry_worklist/wizard/scan_wizard.py:0
+msgid "The selected stock scope cannot be scanned with your current access rights."
+msgstr "Wybrany zakres zapasu nie może zostać przeskanowany przy bieżących uprawnieniach."
+
+#. module: cyfr_lot_expiry_worklist
+#. odoo-python
+#: code:addons/cyfr_lot_expiry_worklist/models/expiry_entry.py:0
+msgid "The stock company must be active for your user."
+msgstr "Firma zapasu musi być aktywna dla tego użytkownika."
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,help:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_scan__location_id
+msgid "This company-owned internal location and its internal descendants."
+msgstr "Ta lokalizacja wewnętrzna należąca do firmy oraz jej wewnętrzne podlokalizacje."
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__product_uom_id
+msgid "Unit"
+msgstr "Jednostka"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,field_description:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__website_message_ids
+msgid "Website Messages"
+msgstr "Wiadomości na stronie internetowej"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields,help:cyfr_lot_expiry_worklist.field_cyfr_lot_expiry_entry__website_message_ids
+msgid "Website communication history"
+msgstr "Historia komunikacji na stronie internetowej"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.model.fields.selection,name:cyfr_lot_expiry_worklist.selection__cyfr_lot_expiry_entry__expiry_state__within_horizon
+msgid "Within Horizon"
+msgstr "W horyzoncie"
+
+#. module: cyfr_lot_expiry_worklist
+#: model:ir.ui.menu,name:cyfr_lot_expiry_worklist.menu_lot_expiry_entries
+msgid "Worklist"
+msgstr "Lista zadań"

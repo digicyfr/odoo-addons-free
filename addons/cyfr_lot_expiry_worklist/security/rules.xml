@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="rule_lot_expiry_entry_company" model="ir.rule">
+        <field name="name">Lot expiry actions in active companies</field>
+        <field name="model_id" ref="model_cyfr_lot_expiry_entry"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+    </record>
+    <record id="rule_lot_expiry_scan_company" model="ir.rule">
+        <field name="name">Lot expiry scans in active companies</field>
+        <field name="model_id" ref="model_cyfr_lot_expiry_scan"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+    </record>
+    <record id="rule_lot_expiry_assign_company" model="ir.rule">
+        <field name="name">Lot expiry assignment in active companies</field>
+        <field name="model_id" ref="model_cyfr_lot_expiry_assign"/>
+        <field name="domain_force">[('entry_id.company_id', 'in', company_ids)]</field>
+    </record>
+</odoo>
