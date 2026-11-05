@@ -7,12 +7,13 @@ license copy, English and Polish guides, demo data, and tests.
 | Module | Purpose | Required Odoo app |
 | --- | --- | --- |
 | [`cyfr_product_data_health`](addons/cyfr_product_data_health/README.md) | Review missing product identifiers, prices, categories, and images after a catalog import | `product` |
+| [`cyfr_crm_next_step`](addons/cyfr_crm_next_step/README.md) | Find open CRM leads with no scheduled activity or an overdue activity | `crm` |
 
 ## Install
 
 Use a self-hosted Odoo 19 server or Odoo.sh deployment that permits custom
 add-ons. Place the module directory on the Odoo add-ons path, update the Apps
-list, and install **Product Data Health**. The versioned ZIP attached to each
+list, and install the selected module. The versioned ZIP attached to each
 module's GitHub release contains one add-on directory and a separate SHA-256
 checksum file. Verify the checksum before installation.
 

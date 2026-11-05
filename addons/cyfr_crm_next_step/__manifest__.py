@@ -1,0 +1,15 @@
+{
+    "name": "CRM Next Step Queue",
+    "summary": "Review open leads with no planned activity or an overdue activity",
+    "version": "19.0.1.0.0",
+    "category": "Sales/CRM",
+    "author": "Cyfr Sp. z o.o.",
+    "website": "https://digicyfr.com",
+    "license": "LGPL-3",
+    "depends": ["crm"],
+    "data": ["views/next_step_views.xml"],
+    "demo": ["demo/next_step_demo.xml"],
+    "application": False,
+    "installable": True,
+    "auto_install": False,
+}

@@ -7,12 +7,13 @@ polsku, dane demonstracyjne oraz testy.
 | Moduł | Zastosowanie | Wymagana aplikacja Odoo |
 | --- | --- | --- |
 | [`cyfr_product_data_health`](addons/cyfr_product_data_health/README.pl.md) | Przegląd brakujących identyfikatorów, cen, kategorii i obrazów produktów po imporcie katalogu | `product` |
+| [`cyfr_crm_next_step`](addons/cyfr_crm_next_step/README.pl.md) | Lista otwartych szans bez zaplanowanego działania lub z zaległym działaniem | `crm` |
 
 ## Instalacja
 
 Użyj serwera Odoo 19 z możliwością instalowania własnych modułów albo Odoo.sh.
 Umieść katalog modułu na ścieżce dodatków, odśwież listę aplikacji i zainstaluj
-**Product Data Health**. Archiwum ZIP przypisane do wydania zawiera jeden moduł.
+wybrany moduł. Archiwum ZIP przypisane do wydania zawiera jeden moduł.
 Przed instalacją sprawdź sumę SHA-256 z dołączonego pliku.
 
 Odoo Online nie pozwala instalować dowolnych modułów serwerowych. Wersja Odoo 19

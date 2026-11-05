@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_crm_next_step_list" model="ir.ui.view">
+        <field name="name">crm.lead.next.step.list</field>
+        <field name="model">crm.lead</field>
+        <field name="arch" type="xml">
+            <list string="Next Step Queue" create="0" edit="0" delete="0" sample="0">
+                <field name="name" string="Lead / Opportunity"/>
+                <field name="type" optional="show"/>
+                <field name="user_id" optional="show" widget="many2one_avatar_user"/>
+                <field name="team_id" optional="show"/>
+                <field name="company_id" groups="base.group_multi_company" optional="hide"/>
+                <field name="cyfr_next_step_reason"/>
+                <field name="activity_date_deadline" string="Next Activity Due"/>
+                <field name="activity_ids" widget="list_activity" optional="show"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_crm_next_step_search" model="ir.ui.view">
+        <field name="name">crm.lead.next.step.search</field>
+        <field name="model">crm.lead</field>
+        <field name="arch" type="xml">
+            <search string="Search Next Step Queue">
+                <field name="name"/>
+                <field name="user_id"/>
+                <field name="team_id"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+                <separator/>
+                <filter name="no_activity" string="No Scheduled Activity"
+                        domain="[('activity_state', 'in', [False])]"/>
+                <filter name="overdue" string="Overdue Activity"
+                        domain="[('activity_state', 'in', ['overdue'])]"/>
+                <separator/>
+                <filter name="my_leads" string="My Leads" domain="[('user_id', '=', uid)]"/>
+                <group>
+                    <filter name="group_salesperson" string="Salesperson" context="{'group_by': 'user_id'}"/>
+                    <filter name="group_team" string="Sales Team" context="{'group_by': 'team_id'}"/>
+                    <filter name="group_company" string="Company" context="{'group_by': 'company_id'}" groups="base.group_multi_company"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_crm_next_step_queue" model="ir.actions.act_window">
+        <field name="name">Next Step Queue</field>
+        <field name="res_model">crm.lead</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="view_crm_next_step_list"/>
+        <field name="search_view_id" ref="view_crm_next_step_search"/>
+        <field name="domain">[('active', '=', True), ('won_status', '=', 'pending'), ('activity_state', 'in', [False, 'overdue'])]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Every open lead has an active activity that is not overdue.</p>
+            <p>Schedule a next activity from a lead to remove it from this queue.</p>
+        </field>
+    </record>
+
+    <menuitem id="menu_crm_next_step_queue" name="Next Step Queue"
+              parent="crm.crm_menu_sales" action="action_crm_next_step_queue"
+              groups="sales_team.group_sale_salesman,sales_team.group_sale_manager"
+              sequence="3"/>
+</odoo>
