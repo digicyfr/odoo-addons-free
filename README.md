@@ -50,7 +50,7 @@ Enterprise compatibility has not yet been tested.
 ## Source and support
 
 Each release tag is named `<module>-<version>` and contains the matching source.
-Use [GitHub Issues](https://github.com/digicyfr/odoo-addons-free/issues) for
+Use the issue tracker in the relevant standalone repository for
 reproducible defects. Do not post credentials, session cookies, private product
 data, or database exports. See each module's `SECURITY.md` for its data-access
 and disclosure policy.
