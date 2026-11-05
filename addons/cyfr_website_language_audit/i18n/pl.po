@@ -1,0 +1,422 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* cyfr_website_language_audit
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cyfr_website_language_audit 19.0.1.0.0\n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields.selection,name:cyfr_website_language_audit.selection__cyfr_website_audit_issue__severity__warning
+msgid "Attention"
+msgstr "Wymaga uwagi"
+
+#. module: cyfr_website_language_audit
+#: model:ir.ui.view,website_meta_title:cyfr_website_language_audit.audit_demo_main_view
+msgid "Audit Demo Main SEO Title"
+msgstr "Główny tytuł SEO demonstracji audytu"
+
+#. module: cyfr_website_language_audit
+#: model:ir.ui.menu,name:cyfr_website_language_audit.menu_website_audit_issue
+msgid "Audit Issues"
+msgstr "Wyniki audytu"
+
+#. module: cyfr_website_language_audit
+#. odoo-python
+#: code:addons/cyfr_website_language_audit/models/website_language_audit.py:0
+msgid "Audit issues are created only by a scan."
+msgstr "Wyniki audytu mogą być tworzone tylko przez skanowanie."
+
+#. module: cyfr_website_language_audit
+#. odoo-python
+#: code:addons/cyfr_website_language_audit/models/website_language_audit.py:0
+msgid "Choose a non-default language for the selected website."
+msgstr "Wybierz język inny niż domyślny dla tej witryny."
+
+#. module: cyfr_website_language_audit
+#. odoo-python
+#: code:addons/cyfr_website_language_audit/models/website_language_audit.py:0
+msgid "Choose an enabled non-default website language."
+msgstr "Wybierz włączony język witryny inny niż domyślny."
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields,help:cyfr_website_language_audit.field_cyfr_website_audit_run__ignored_terms
+msgid ""
+"Comma-separated short names or brands that may stay identical between "
+"languages."
+msgstr "Krótkie nazwy lub marki oddzielone przecinkami, które mogą być identyczne w obu językach."
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_issue__company_id
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_run__company_id
+msgid "Company"
+msgstr "Firma"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_run__completed_at
+msgid "Completed At"
+msgstr "Zakończono"
+
+#. module: cyfr_website_language_audit
+#. odoo-python
+#: code:addons/cyfr_website_language_audit/models/website_language_audit.py:0
+msgid "Completed audits cannot be edited."
+msgstr "Zakończonego audytu nie można edytować."
+
+#. module: cyfr_website_language_audit
+#. odoo-python
+#: code:addons/cyfr_website_language_audit/models/website_language_audit.py:0
+msgid "Create a new audit to scan again."
+msgstr "Utwórz nowy audyt, aby ponowić skanowanie."
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_issue__create_uid
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_run__create_uid
+msgid "Created by"
+msgstr "Utworzył"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_issue__create_date
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_run__create_date
+msgid "Created on"
+msgstr "Utworzono"
+
+#. module: cyfr_website_language_audit
+#: model_terms:ir.ui.view,arch_db:cyfr_website_language_audit.audit_demo_main_view
+msgid "Digicyfr Studio"
+msgstr "Digicyfr Studio"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_issue__display_name
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_run__display_name
+msgid "Display Name"
+msgstr "Nazwa wyświetlana"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields.selection,name:cyfr_website_language_audit.selection__cyfr_website_audit_run__state__done
+msgid "Done"
+msgstr "Zakończony"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_run__ignored_terms
+msgid "Exact terms to ignore"
+msgstr "Dokładne nazwy do pominięcia"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields.selection,name:cyfr_website_language_audit.selection__cyfr_website_audit_run__state__failed
+msgid "Failed"
+msgstr "Niepowodzenie"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_issue__node_ref
+msgid "Field or node"
+msgstr "Pole lub węzeł"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_issue__id
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_run__id
+msgid "ID"
+msgstr "ID"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields.selection,name:cyfr_website_language_audit.selection__cyfr_website_audit_issue__issue_type__identical_text
+msgid "Identical static text — review"
+msgstr "Identyczny tekst statyczny — do sprawdzenia"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields.selection,name:cyfr_website_language_audit.selection__cyfr_website_audit_issue__issue_type__missing_alt
+msgid "Image without a description"
+msgstr "Obraz bez opisu"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_run__issue_ids
+msgid "Issue"
+msgstr "Wynik"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_issue__issue_type
+msgid "Issue Type"
+msgstr "Rodzaj wyniku"
+
+#. module: cyfr_website_language_audit
+#: model_terms:ir.ui.view,arch_db:cyfr_website_language_audit.view_website_audit_issue_search
+msgid "Issue type"
+msgstr "Rodzaj wyniku"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_run__issue_count
+msgid "Issues"
+msgstr "Wyniki"
+
+#. module: cyfr_website_language_audit
+#. odoo-python
+#: code:addons/cyfr_website_language_audit/models/website_language_audit.py:0
+#: model_terms:ir.ui.view,arch_db:cyfr_website_language_audit.view_website_audit_run_search
+msgid "Language"
+msgstr "Język"
+
+#. module: cyfr_website_language_audit
+#: model_terms:ir.ui.view,arch_db:cyfr_website_language_audit.view_website_audit_issue_form
+msgid "Language Audit Issue"
+msgstr "Wynik audytu językowego"
+
+#. module: cyfr_website_language_audit
+#: model:ir.actions.act_window,name:cyfr_website_language_audit.action_website_audit_issue
+msgid "Language Audit Issues"
+msgstr "Wyniki audytu językowego"
+
+#. module: cyfr_website_language_audit
+#: model:ir.actions.act_window,name:cyfr_website_language_audit.action_website_audit_run
+#: model:ir.ui.menu,name:cyfr_website_language_audit.menu_website_audit_run
+msgid "Language Audits"
+msgstr "Audyty językowe"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_issue__write_uid
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_run__write_uid
+msgid "Last Updated by"
+msgstr "Ostatnio zaktualizował"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_issue__write_date
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_run__write_date
+msgid "Last Updated on"
+msgstr "Ostatnio zaktualizowano"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_run__name
+msgid "Name"
+msgstr "Nazwa"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields.selection,name:cyfr_website_language_audit.selection__cyfr_website_audit_issue__issue_type__missing_meta_description
+msgid "No localized SEO description"
+msgstr "Brak opisu SEO w języku docelowym"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields.selection,name:cyfr_website_language_audit.selection__cyfr_website_audit_issue__issue_type__missing_meta_title
+msgid "No localized SEO title"
+msgstr "Brak tytułu SEO w języku docelowym"
+
+#. module: cyfr_website_language_audit
+#. odoo-python
+#: code:addons/cyfr_website_language_audit/models/website_language_audit.py:0
+msgid "Only website designers can open the page editor."
+msgstr "Tylko projektanci witryny mogą otworzyć edytor strony."
+
+#. module: cyfr_website_language_audit
+#. odoo-python
+#: code:addons/cyfr_website_language_audit/models/website_language_audit.py:0
+msgid "Only website designers can run an audit."
+msgstr "Tylko projektanci witryny mogą uruchomić audyt."
+
+#. module: cyfr_website_language_audit
+#. odoo-python
+#: code:addons/cyfr_website_language_audit/models/website_language_audit.py:0
+msgid "Only website, language, and ignored terms can be set on a new audit."
+msgstr "W nowym audycie można ustawić tylko witrynę, język i pomijane nazwy."
+
+#. module: cyfr_website_language_audit
+#: model_terms:ir.ui.view,arch_db:cyfr_website_language_audit.view_website_audit_issue_form
+#: model_terms:ir.ui.view,arch_db:cyfr_website_language_audit.view_website_audit_issue_list
+msgid "Open editor"
+msgstr "Otwórz edytor"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_issue__page_id
+msgid "Page"
+msgstr "Strona"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_issue__page_currently_public
+msgid "Page Currently Public"
+msgstr "Strona obecnie publiczna"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_issue__page_url
+msgid "Page URL"
+msgstr "Adres strony"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_run__processed_count
+msgid "Pages checked"
+msgstr "Sprawdzone strony"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_run__total_count
+msgid "Pages selected"
+msgstr "Wybrane strony"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_run__failure_count
+msgid "Pages that could not be parsed"
+msgstr "Strony, których nie udało się przetworzyć"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields.selection,name:cyfr_website_language_audit.selection__cyfr_website_audit_run__state__draft
+msgid "Ready"
+msgstr "Gotowy"
+
+#. module: cyfr_website_language_audit
+#: model_terms:ir.ui.view,arch_db:cyfr_website_language_audit.view_website_audit_run_form
+msgid "Result"
+msgstr "Wynik"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields.selection,name:cyfr_website_language_audit.selection__cyfr_website_audit_issue__severity__info
+msgid "Review"
+msgstr "Do sprawdzenia"
+
+#. module: cyfr_website_language_audit
+#: model_terms:ir.ui.view,arch_db:cyfr_website_language_audit.view_website_audit_run_form
+msgid "Review issues"
+msgstr "Przejrzyj wyniki"
+
+#. module: cyfr_website_language_audit
+#: model_terms:ir.ui.view,arch_db:cyfr_website_language_audit.audit_demo_main_view
+msgid "Review this intentionally identical sample sentence."
+msgstr "Review this intentionally identical sample sentence."
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_issue__run_id
+msgid "Run"
+msgstr "Audyt"
+
+#. module: cyfr_website_language_audit
+#: model_terms:ir.ui.view,arch_db:cyfr_website_language_audit.view_website_audit_run_form
+msgid "Scan published pages"
+msgstr "Skanuj opublikowane strony"
+
+#. module: cyfr_website_language_audit
+#: model_terms:ir.ui.view,arch_db:cyfr_website_language_audit.audit_demo_second_view
+msgid "Second website published page for audit."
+msgstr "Opublikowana strona drugiej witryny do audytu."
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_issue__severity
+msgid "Severity"
+msgstr "Waga"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_issue__source_hash
+msgid "Source SHA-256"
+msgstr "Skrót SHA-256 źródła"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_run__started_at
+msgid "Started At"
+msgstr "Rozpoczęto"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_run__user_id
+msgid "Started by"
+msgstr "Uruchomił"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_run__state
+msgid "State"
+msgstr "Stan"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_issue__lang_id
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_run__lang_id
+msgid "Target Language"
+msgstr "Język docelowy"
+
+#. module: cyfr_website_language_audit
+#. odoo-python
+#: code:addons/cyfr_website_language_audit/models/website_language_audit.py:0
+msgid "The ignored-terms list is limited to 200 characters."
+msgstr "Lista pomijanych nazw może mieć najwyżej 200 znaków."
+
+#. module: cyfr_website_language_audit
+#. odoo-python
+#: code:addons/cyfr_website_language_audit/models/website_language_audit.py:0
+msgid "The page is outside this audit's website."
+msgstr "Strona jest poza witryną wybraną dla audytu."
+
+#. module: cyfr_website_language_audit
+#. odoo-python
+#: code:addons/cyfr_website_language_audit/models/website_language_audit.py:0
+msgid "The selected website is outside your allowed companies."
+msgstr "Wybrana witryna jest poza dozwolonymi firmami."
+
+#. module: cyfr_website_language_audit
+#. odoo-python
+#: code:addons/cyfr_website_language_audit/models/website_language_audit.py:0
+msgid "The target language must be enabled on the selected website."
+msgstr "Język docelowy musi być włączony w wybranej witrynie."
+
+#. module: cyfr_website_language_audit
+#. odoo-python
+#: code:addons/cyfr_website_language_audit/models/website_language_audit.py:0
+msgid "This audit cannot be removed while it is running."
+msgstr "Nie można usunąć trwającego audytu."
+
+#. module: cyfr_website_language_audit
+#. odoo-python
+#: code:addons/cyfr_website_language_audit/models/website_language_audit.py:0
+msgid "This audit is already being scanned."
+msgstr "Ten audyt jest już skanowany."
+
+#. module: cyfr_website_language_audit
+#: model_terms:ir.ui.view,arch_db:cyfr_website_language_audit.audit_demo_main_view
+msgid "This dynamic sentence is excluded."
+msgstr "To dynamiczne zdanie jest pomijane."
+
+#. module: cyfr_website_language_audit
+#. odoo-python
+#: code:addons/cyfr_website_language_audit/models/website_language_audit.py:0
+msgid "This page is no longer effective for this website."
+msgstr "Ta strona nie jest już używana w tej witrynie."
+
+#. module: cyfr_website_language_audit
+#. odoo-python
+#: code:addons/cyfr_website_language_audit/models/website_language_audit.py:0
+msgid "This page is no longer public."
+msgstr "Ta strona nie jest już publiczna."
+
+#. module: cyfr_website_language_audit
+#: model_terms:ir.ui.view,arch_db:cyfr_website_language_audit.audit_demo_unpublished_view
+msgid "This unpublished page must stay out of the audit."
+msgstr "Ta nieopublikowana strona nie może trafić do audytu."
+
+#. module: cyfr_website_language_audit
+#: model:ir.model.fields.selection,name:cyfr_website_language_audit.selection__cyfr_website_audit_run__state__truncated
+msgid "Truncated"
+msgstr "Ucięty"
+
+#. module: cyfr_website_language_audit
+#. odoo-python
+#: code:addons/cyfr_website_language_audit/models/website_language_audit.py:0
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_issue__website_id
+#: model:ir.model.fields,field_description:cyfr_website_language_audit.field_cyfr_website_audit_run__website_id
+#: model_terms:ir.ui.view,arch_db:cyfr_website_language_audit.view_website_audit_issue_search
+#: model_terms:ir.ui.view,arch_db:cyfr_website_language_audit.view_website_audit_run_search
+msgid "Website"
+msgstr "Witryna"
+
+#. module: cyfr_website_language_audit
+#: model_terms:ir.ui.view,arch_db:cyfr_website_language_audit.view_website_audit_run_form
+msgid "Website Language Audit"
+msgstr "Audyt językowy witryny"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model,name:cyfr_website_language_audit.model_cyfr_website_audit_issue
+msgid "Website Language Audit Issue"
+msgstr "Wynik audytu językowego witryny"
+
+#. module: cyfr_website_language_audit
+#: model:ir.model,name:cyfr_website_language_audit.model_cyfr_website_audit_run
+msgid "Website Language Audit Run"
+msgstr "Przebieg audytu językowego witryny"
+
+#. module: cyfr_website_language_audit
+#: model_terms:ir.ui.view,arch_db:cyfr_website_language_audit.audit_demo_main_view
+msgid "Website language audit demonstration"
+msgstr "Demonstracja audytu językowego witryny"

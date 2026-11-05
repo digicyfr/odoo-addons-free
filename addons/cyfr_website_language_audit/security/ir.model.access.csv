@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_website_audit_run_reader,website.audit.run.reader,model_cyfr_website_audit_run,website.group_website_restricted_editor,1,0,0,0
+access_website_audit_run_designer,website.audit.run.designer,model_cyfr_website_audit_run,website.group_website_designer,1,1,1,1
+access_website_audit_issue_reader,website.audit.issue.reader,model_cyfr_website_audit_issue,website.group_website_restricted_editor,1,0,0,0
+access_website_audit_issue_designer,website.audit.issue.designer,model_cyfr_website_audit_issue,website.group_website_designer,1,0,1,0

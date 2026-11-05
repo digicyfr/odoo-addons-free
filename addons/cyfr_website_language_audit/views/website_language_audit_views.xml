@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_website_audit_run_list" model="ir.ui.view">
+        <field name="name">cyfr.website.audit.run.list</field>
+        <field name="model">cyfr.website.audit.run</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="website_id"/>
+                <field name="lang_id"/>
+                <field name="state"/>
+                <field name="processed_count"/>
+                <field name="total_count"/>
+                <field name="issue_count"/>
+                <field name="failure_count"/>
+                <field name="completed_at"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_website_audit_run_form" model="ir.ui.view">
+        <field name="name">cyfr.website.audit.run.form</field>
+        <field name="model">cyfr.website.audit.run</field>
+        <field name="arch" type="xml">
+            <form string="Website Language Audit" edit="1">
+                <header>
+                    <button name="action_scan" type="object" string="Scan published pages" class="btn-primary" invisible="state != 'draft'" groups="website.group_website_designer"/>
+                    <button name="action_open_issues" type="object" string="Review issues" invisible="state == 'draft'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,done,truncated,failed"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="website_id" options="{'no_create': True}" readonly="state != 'draft'"/>
+                            <field name="lang_id" options="{'no_create': True}" readonly="state != 'draft'"/>
+                            <field name="ignored_terms" readonly="state != 'draft'"/>
+                        </group>
+                        <group>
+                            <field name="company_id"/>
+                            <field name="user_id"/>
+                            <field name="started_at"/>
+                            <field name="completed_at"/>
+                        </group>
+                    </group>
+                    <group string="Result">
+                        <field name="processed_count"/>
+                        <field name="total_count"/>
+                        <field name="issue_count"/>
+                        <field name="failure_count"/>
+                    </group>
+                    <field name="issue_ids" readonly="1">
+                        <list create="0" edit="0" delete="0">
+                            <field name="page_url"/>
+                            <field name="issue_type"/>
+                            <field name="severity"/>
+                            <field name="node_ref"/>
+                        </list>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_website_audit_run_search" model="ir.ui.view">
+        <field name="name">cyfr.website.audit.run.search</field>
+        <field name="model">cyfr.website.audit.run</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="website_id"/>
+                <field name="lang_id"/>
+                <filter name="group_website" string="Website" context="{'group_by': 'website_id'}"/>
+                <filter name="group_language" string="Language" context="{'group_by': 'lang_id'}"/>
+            </search>
+        </field>
+    </record>
+    <record id="action_website_audit_run" model="ir.actions.act_window">
+        <field name="name">Language Audits</field>
+        <field name="res_model">cyfr.website.audit.run</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_website_audit_run_search"/>
+    </record>
+
+    <record id="view_website_audit_issue_list" model="ir.ui.view">
+        <field name="name">cyfr.website.audit.issue.list</field>
+        <field name="model">cyfr.website.audit.issue</field>
+        <field name="arch" type="xml">
+            <list create="0" edit="0" delete="0">
+                <field name="page_url"/>
+                <field name="website_id"/>
+                <field name="lang_id"/>
+                <field name="issue_type"/>
+                <field name="severity"/>
+                <field name="node_ref"/>
+                <button name="action_open_page" type="object" string="Open editor" groups="website.group_website_designer"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_website_audit_issue_form" model="ir.ui.view">
+        <field name="name">cyfr.website.audit.issue.form</field>
+        <field name="model">cyfr.website.audit.issue</field>
+        <field name="arch" type="xml">
+            <form string="Language Audit Issue" create="0" edit="0" delete="0">
+                <header>
+                    <button name="action_open_page" type="object" string="Open editor" class="btn-primary" groups="website.group_website_designer"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="page_url"/>
+                        <field name="website_id"/>
+                        <field name="lang_id"/>
+                        <field name="issue_type"/>
+                        <field name="severity"/>
+                        <field name="node_ref"/>
+                        <field name="source_hash"/>
+                        <field name="run_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_website_audit_issue_search" model="ir.ui.view">
+        <field name="name">cyfr.website.audit.issue.search</field>
+        <field name="model">cyfr.website.audit.issue</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="page_url"/>
+                <field name="website_id"/>
+                <field name="lang_id"/>
+                <field name="issue_type"/>
+                <filter name="group_website" string="Website" context="{'group_by': 'website_id'}"/>
+                <filter name="group_type" string="Issue type" context="{'group_by': 'issue_type'}"/>
+            </search>
+        </field>
+    </record>
+    <record id="action_website_audit_issue" model="ir.actions.act_window">
+        <field name="name">Language Audit Issues</field>
+        <field name="res_model">cyfr.website.audit.issue</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_website_audit_issue_search"/>
+    </record>
+
+    <menuitem id="menu_website_audit_run" name="Language Audits" parent="website.menu_reporting" action="action_website_audit_run" sequence="30" groups="website.group_website_restricted_editor"/>
+    <menuitem id="menu_website_audit_issue" name="Audit Issues" parent="website.menu_reporting" action="action_website_audit_issue" sequence="31" groups="website.group_website_restricted_editor"/>
+</odoo>

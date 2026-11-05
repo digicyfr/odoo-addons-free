@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <function model="res.lang" name="_activate_lang" eval="[[], 'en_US']"/>
+    <function model="res.lang" name="_activate_lang" eval="[[], 'pl_PL']"/>
+
+    <record id="website.default_website" model="website">
+        <field name="default_lang_id" ref="base.lang_en"/>
+        <field name="language_ids" eval="[(4, ref('base.lang_en')), (4, ref('base.lang_pl'))]"/>
+    </record>
+    <record id="audit_demo_second_website" model="website">
+        <field name="name">Audit Demo Second Site</field>
+        <field name="company_id" ref="base.main_company"/>
+        <field name="default_lang_id" ref="base.lang_en"/>
+        <field name="language_ids" eval="[(6, 0, [ref('base.lang_en'), ref('base.lang_pl')])]"/>
+    </record>
+
+    <record id="audit_demo_main_view" model="ir.ui.view">
+        <field name="name">Audit Demo Main Page</field>
+        <field name="key">cyfr_website_language_audit.demo_main</field>
+        <field name="type">qweb</field>
+        <field name="website_id" ref="website.default_website"/>
+        <field name="website_meta_title">Audit Demo Main SEO Title</field>
+        <field name="arch_db" type="xml">
+            <t t-name="cyfr_website_language_audit.demo_main">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure">
+                        <main>
+                            <h1>Website language audit demonstration</h1>
+                            <p>Review this intentionally identical sample sentence.</p>
+                            <p>Digicyfr Studio</p>
+                            <img src="/web/static/img/placeholder.png"/>
+                            <img src="/web/static/img/placeholder.png" alt=""/>
+                            <p t-if="False">This dynamic sentence is excluded.</p>
+                        </main>
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+    <record id="audit_demo_main_page" model="website.page">
+        <field name="view_id" ref="audit_demo_main_view"/>
+        <field name="url">/cyfr-audit-demo-main</field>
+        <field name="is_published" eval="True"/>
+    </record>
+
+    <record id="audit_demo_second_view" model="ir.ui.view">
+        <field name="name">Audit Demo Second Site Page</field>
+        <field name="key">cyfr_website_language_audit.demo_second</field>
+        <field name="type">qweb</field>
+        <field name="website_id" ref="audit_demo_second_website"/>
+        <field name="arch_db" type="xml">
+            <t t-name="cyfr_website_language_audit.demo_second">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure">
+                        <main><p>Second website published page for audit.</p></main>
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+    <record id="audit_demo_second_page" model="website.page">
+        <field name="view_id" ref="audit_demo_second_view"/>
+        <field name="url">/cyfr-audit-demo-second</field>
+        <field name="is_published" eval="True"/>
+    </record>
+
+    <record id="audit_demo_unpublished_view" model="ir.ui.view">
+        <field name="name">Audit Demo Unpublished Page</field>
+        <field name="key">cyfr_website_language_audit.demo_unpublished</field>
+        <field name="type">qweb</field>
+        <field name="website_id" ref="audit_demo_second_website"/>
+        <field name="arch_db" type="xml">
+            <t t-name="cyfr_website_language_audit.demo_unpublished">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure">
+                        <main><p>This unpublished page must stay out of the audit.</p></main>
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+    <record id="audit_demo_unpublished_page" model="website.page">
+        <field name="view_id" ref="audit_demo_unpublished_view"/>
+        <field name="url">/cyfr-audit-demo-unpublished</field>
+        <field name="is_published" eval="False"/>
+    </record>
+
+    <record id="audit_demo_main_run" model="cyfr.website.audit.run">
+        <field name="website_id" ref="website.default_website"/>
+        <field name="lang_id" ref="base.lang_pl"/>
+        <field name="ignored_terms">Digicyfr Studio</field>
+    </record>
+    <record id="audit_demo_second_run" model="cyfr.website.audit.run">
+        <field name="website_id" ref="audit_demo_second_website"/>
+        <field name="lang_id" ref="base.lang_pl"/>
+    </record>
+</odoo>

@@ -9,6 +9,9 @@ license copy, English and Polish guides, demo data, and tests.
 | [`cyfr_product_data_health`](addons/cyfr_product_data_health/README.md) | Review missing product identifiers, prices, categories, and images after a catalog import | `product` |
 | [`cyfr_crm_next_step`](addons/cyfr_crm_next_step/README.md) | Find open CRM leads with no scheduled activity or an overdue activity | `crm` |
 | [`cyfr_pos_tax_audit`](addons/cyfr_pos_tax_audit/README.md) | Review POS catalog taxes and configured fiscal-position mappings before opening a till | `point_of_sale` |
+| [`cyfr_stock_exception_queue`](addons/cyfr_stock_exception_queue/README.md) | Review negative, below-minimum, and persistently unavailable stock in a bounded advisory queue | `stock` |
+| [`cyfr_purchase_receipt_delays`](addons/cyfr_purchase_receipt_delays/README.md) | Review late or soon-due open physical purchase receipts and schedule follow-up activities | `purchase_stock` |
+| [`cyfr_website_language_audit`](addons/cyfr_website_language_audit/README.md) | Review static multilingual page content, missing localized SEO fields, and image descriptions | `website` |
 
 ## Install
 
