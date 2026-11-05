@@ -1,0 +1,407 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* cyfr_quote_watchlist
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0-20260908\n"
+"Language: pl_PL\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-05 05:08+0000\n"
+"PO-Revision-Date: 2026-11-05 05:08+0000\n"
+"Last-Translator: \n"
+"Language-Team: Polish \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+#. module: cyfr_quote_watchlist
+#. odoo-python
+#: code:addons/cyfr_quote_watchlist/models/quote_watchlist.py:0
+msgid "A linked quotation is no longer readable."
+msgstr "Powiązana oferta nie jest już dostępna do odczytu."
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist_line__has_due_today_activity
+msgid "Activity Due Today"
+msgstr "Aktywność na dziś"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist__company_id
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist_line__company_id
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist_setting__company_id
+#: model_terms:ir.ui.view,arch_db:cyfr_quote_watchlist.view_quote_watchlist_line_search
+msgid "Company"
+msgstr "Firma"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist__create_uid
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist_line__create_uid
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist_setting__create_uid
+msgid "Created by"
+msgstr "Utworzone przez"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist__create_date
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist_line__create_date
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist_setting__create_date
+msgid "Created on"
+msgstr "Data utworzenia"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist_line__partner_id
+msgid "Customer"
+msgstr "Klient"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist__display_name
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist_line__display_name
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist_setting__display_name
+msgid "Display Name"
+msgstr "Nazwa wyświetlana"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist_line__validity_date
+msgid "Expiration"
+msgstr "Data ważności"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields.selection,name:cyfr_quote_watchlist.selection__cyfr_quote_watchlist_line__expiry_status__expired
+#: model:ir.model.fields.selection,name:cyfr_quote_watchlist.selection__cyfr_quote_watchlist_line__reason_code__expired
+#: model_terms:ir.ui.view,arch_db:cyfr_quote_watchlist.view_quote_watchlist_line_search
+msgid "Expired"
+msgstr "Po terminie"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields.selection,name:cyfr_quote_watchlist.selection__cyfr_quote_watchlist_line__expiry_status__soon
+#: model:ir.model.fields.selection,name:cyfr_quote_watchlist.selection__cyfr_quote_watchlist_line__reason_code__soon
+#: model_terms:ir.ui.view,arch_db:cyfr_quote_watchlist.view_quote_watchlist_line_search
+msgid "Expiring Soon"
+msgstr "Wkrótce wygasa"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist__horizon_days
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist_setting__horizon_days
+msgid "Expiry Horizon (Days)"
+msgstr "Horyzont ważności (dni)"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist_line__expiry_status
+msgid "Expiry Status"
+msgstr "Stan ważności"
+
+#. module: cyfr_quote_watchlist
+#. odoo-python
+#: code:addons/cyfr_quote_watchlist/models/quote_watchlist.py:0
+msgid "Expiry horizon must be between 0 and 90 days."
+msgstr "Horyzont ważności musi wynosić od 0 do 90 dni."
+
+#. module: cyfr_quote_watchlist
+#. odoo-python
+#: code:addons/cyfr_quote_watchlist/models/quote_watchlist.py:0
+msgid "Follow up quotation %s"
+msgstr "Kontakt w sprawie oferty %s"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist__id
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist_line__id
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist_setting__id
+msgid "ID"
+msgstr "ID"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist__scanned_at
+msgid "Last Scan"
+msgstr "Ostatni skan"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist__write_uid
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist_line__write_uid
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist_setting__write_uid
+msgid "Last Updated by"
+msgstr "Ostatnio zmienione przez"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist__write_date
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist_line__write_date
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist_setting__write_date
+msgid "Last Updated on"
+msgstr "Data ostatniej zmiany"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields.selection,name:cyfr_quote_watchlist.selection__cyfr_quote_watchlist_line__expiry_status__later
+msgid "Later"
+msgstr "Później"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist__line_ids
+msgid "Line"
+msgstr "Wiersz"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist_line__next_activity_date
+msgid "Next Future Activity"
+msgstr "Najbliższa przyszła aktywność"
+
+#. module: cyfr_quote_watchlist
+#: model_terms:ir.ui.view,arch_db:cyfr_quote_watchlist.view_quote_watchlist_line_list
+msgid "Next activity"
+msgstr "Nast. akt."
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist_line__missing_future_activity
+#: model:ir.model.fields.selection,name:cyfr_quote_watchlist.selection__cyfr_quote_watchlist_line__reason_code__no_future
+#: model_terms:ir.ui.view,arch_db:cyfr_quote_watchlist.view_quote_watchlist_line_search
+msgid "No Future Activity"
+msgstr "Brak przyszłej aktywności"
+
+#. module: cyfr_quote_watchlist
+#: model_terms:ir.ui.view,arch_db:cyfr_quote_watchlist.view_quote_watchlist_line_list
+msgid "No future"
+msgstr "Brak nast. akt."
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.constraint,message:cyfr_quote_watchlist.constraint_cyfr_quote_watchlist_setting_company_unique
+msgid "Only one watchlist setting is allowed per company."
+msgstr "Dla każdej firmy może istnieć tylko jedno ustawienie listy ofert."
+
+#. module: cyfr_quote_watchlist
+#. odoo-python
+#: code:addons/cyfr_quote_watchlist/models/quote_watchlist.py:0
+msgid "Only worklist filters may be changed directly."
+msgstr "Bezpośrednio można zmieniać tylko filtry listy."
+
+#. module: cyfr_quote_watchlist
+#. odoo-python
+#: code:addons/cyfr_quote_watchlist/models/quote_watchlist.py:0
+msgid "Only worklist filters may be set directly."
+msgstr "Bezpośrednio można ustawiać tylko filtry listy."
+
+#. module: cyfr_quote_watchlist
+#: model_terms:ir.ui.view,arch_db:cyfr_quote_watchlist.view_quote_watchlist_line_form
+#: model_terms:ir.ui.view,arch_db:cyfr_quote_watchlist.view_quote_watchlist_line_list
+msgid "Open Quote"
+msgstr "Otwórz ofertę"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist_line__order_id
+msgid "Order"
+msgstr "Zamówienie"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist_line__has_overdue_activity
+msgid "Overdue Activity"
+msgstr "Przeterminowana aktywność"
+
+#. module: cyfr_quote_watchlist
+#. odoo-python
+#: code:addons/cyfr_quote_watchlist/models/quote_watchlist.py:0
+msgid "Quotation"
+msgstr "Oferta"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model,name:cyfr_quote_watchlist.model_cyfr_quote_watchlist_line
+msgid "Quote Follow-up Watchlist Row"
+msgstr "Wiersz listy ofert do kontaktu"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model,name:cyfr_quote_watchlist.model_cyfr_quote_watchlist
+msgid "Quote Follow-up Watchlist Scan"
+msgstr "Skan listy ofert do kontaktu"
+
+#. module: cyfr_quote_watchlist
+#. odoo-python
+#: code:addons/cyfr_quote_watchlist/models/quote_watchlist.py:0
+#: model:ir.actions.act_window,name:cyfr_quote_watchlist.action_quote_watchlist
+#: model:ir.ui.menu,name:cyfr_quote_watchlist.menu_quote_watchlist
+#: model_terms:ir.ui.view,arch_db:cyfr_quote_watchlist.view_quote_watchlist_form
+#: model_terms:ir.ui.view,arch_db:cyfr_quote_watchlist.view_quote_watchlist_line_list
+#: model_terms:ir.ui.view,arch_db:cyfr_quote_watchlist.view_quote_watchlist_line_search
+msgid "Quote Watchlist"
+msgstr "Lista ofert"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model,name:cyfr_quote_watchlist.model_cyfr_quote_watchlist_setting
+msgid "Quote Watchlist Company Setting"
+msgstr "Ustawienie listy ofert dla firmy"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.ui.menu,name:cyfr_quote_watchlist.menu_quote_watchlist_settings
+msgid "Quote Watchlist Horizon"
+msgstr "Horyzont listy ofert"
+
+#. module: cyfr_quote_watchlist
+#: model_terms:ir.ui.view,arch_db:cyfr_quote_watchlist.view_quote_watchlist_line_form
+msgid "Quote Watchlist Row"
+msgstr "Wiersz listy ofert"
+
+#. module: cyfr_quote_watchlist
+#: model_terms:ir.ui.view,arch_db:cyfr_quote_watchlist.view_quote_watchlist_setting_form
+msgid "Quote Watchlist Setting"
+msgstr "Ustawienie listy ofert"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.actions.act_window,name:cyfr_quote_watchlist.action_quote_watchlist_settings
+#: model_terms:ir.ui.view,arch_db:cyfr_quote_watchlist.view_quote_watchlist_setting_list
+msgid "Quote Watchlist Settings"
+msgstr "Ustawienia listy ofert"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist__candidate_count
+msgid "Quotes Checked"
+msgstr "Sprawdzone oferty"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist__result_count
+msgid "Quotes Shown"
+msgstr "Pokazane oferty"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist_line__reason_code
+msgid "Reason Code"
+msgstr "Powód"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist__truncated
+msgid "Results Truncated"
+msgstr "Wyniki ograniczone"
+
+#. module: cyfr_quote_watchlist
+#: model_terms:ir.ui.view,arch_db:cyfr_quote_watchlist.view_quote_watchlist_form
+msgid ""
+"Review draft and sent quotations manually. An activity due today or overdue "
+"is not a future follow-up. Scanning does not change quotations or send "
+"customer messages."
+msgstr "Ręcznie przejrzyj oferty w stanie szkic lub wysłana. Aktywność na dziś albo przeterminowana nie jest przyszłym kontaktem. Skanowanie nie zmienia ofert i nie wysyła wiadomości klientom."
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist__team_id
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist_line__team_id
+#: model_terms:ir.ui.view,arch_db:cyfr_quote_watchlist.view_quote_watchlist_line_search
+msgid "Sales Team"
+msgstr "Zespół sprzedaży"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist__salesperson_id
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist_line__salesperson_id
+#: model_terms:ir.ui.view,arch_db:cyfr_quote_watchlist.view_quote_watchlist_line_search
+msgid "Salesperson"
+msgstr "Sprzedawca"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist__scan_owner_id
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist_line__scan_owner_id
+msgid "Scan Owner"
+msgstr "Autor skanu"
+
+#. module: cyfr_quote_watchlist
+#: model_terms:ir.ui.view,arch_db:cyfr_quote_watchlist.view_quote_watchlist_form
+msgid "Scan Quotations"
+msgstr "Skanuj oferty"
+
+#. module: cyfr_quote_watchlist
+#: model_terms:ir.ui.view,arch_db:cyfr_quote_watchlist.view_quote_watchlist_line_form
+#: model_terms:ir.ui.view,arch_db:cyfr_quote_watchlist.view_quote_watchlist_line_list
+msgid "Schedule Follow-up"
+msgstr "Zaplanuj kontakt"
+
+#. module: cyfr_quote_watchlist
+#. odoo-python
+#: code:addons/cyfr_quote_watchlist/models/quote_watchlist.py:0
+msgid "Schedule Quote Follow-up"
+msgstr "Zaplanuj kontakt dotyczący oferty"
+
+#. module: cyfr_quote_watchlist
+#: model_terms:ir.ui.view,arch_db:cyfr_quote_watchlist.view_quote_watchlist_form
+msgid ""
+"The scan reached its safety limit. Narrow company, salesperson, team or "
+"validity dates and scan again."
+msgstr "Skan osiągnął limit bezpieczeństwa. Zawęź firmę, sprzedawcę, zespół lub daty ważności i uruchom go ponownie."
+
+#. module: cyfr_quote_watchlist
+#. odoo-python
+#: code:addons/cyfr_quote_watchlist/models/quote_watchlist.py:0
+msgid "The selected company is not allowed for your session."
+msgstr "Wybrana firma nie jest dostępna w bieżącej sesji."
+
+#. module: cyfr_quote_watchlist
+#. odoo-python
+#: code:addons/cyfr_quote_watchlist/models/quote_watchlist.py:0
+msgid "This quotation is no longer open."
+msgstr "Ta oferta nie jest już otwarta."
+
+#. module: cyfr_quote_watchlist
+#. odoo-python
+#: code:addons/cyfr_quote_watchlist/models/quote_watchlist.py:0
+msgid "This quotation is outside your session scope."
+msgstr "Ta oferta jest poza zakresem bieżącej sesji."
+
+#. module: cyfr_quote_watchlist
+#. odoo-python
+#: code:addons/cyfr_quote_watchlist/models/quote_watchlist.py:0
+msgid "This watchlist is outside your session scope."
+msgstr "Ta lista jest poza zakresem bieżącej sesji."
+
+#. module: cyfr_quote_watchlist
+#: model_terms:ir.ui.view,arch_db:cyfr_quote_watchlist.view_quote_watchlist_line_list
+msgid "Valid until"
+msgstr "Ważne do"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields.selection,name:cyfr_quote_watchlist.selection__cyfr_quote_watchlist_line__expiry_status__missing
+#: model:ir.model.fields.selection,name:cyfr_quote_watchlist.selection__cyfr_quote_watchlist_line__reason_code__missing
+#: model_terms:ir.ui.view,arch_db:cyfr_quote_watchlist.view_quote_watchlist_line_search
+msgid "Validity Date Missing"
+msgstr "Brak daty ważności"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist__valid_from
+msgid "Validity From"
+msgstr "Ważność od"
+
+#. module: cyfr_quote_watchlist
+#. odoo-python
+#: code:addons/cyfr_quote_watchlist/models/quote_watchlist.py:0
+msgid "Validity From must be on or before Validity Through."
+msgstr "Data „Ważność od” nie może być późniejsza niż data „Ważność do”."
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist__valid_to
+msgid "Validity Through"
+msgstr "Ważność do"
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields,help:cyfr_quote_watchlist.field_cyfr_quote_watchlist_line__validity_date
+msgid ""
+"Validity of the quotation. After this date, you will no longer be able to "
+"sign and pay it."
+msgstr "Termin ważności oferty. Po tej dacie nie będzie można jej podpisać ani opłacić."
+
+#. module: cyfr_quote_watchlist
+#: model_terms:ir.ui.view,arch_db:cyfr_quote_watchlist.view_quote_watchlist_form
+msgid "View Last Scan"
+msgstr "Pokaż ostatni skan"
+
+#. module: cyfr_quote_watchlist
+#. odoo-python
+#: code:addons/cyfr_quote_watchlist/models/quote_watchlist.py:0
+msgid "Watchlist rows are generated only by a scan."
+msgstr "Wiersze listy powstają tylko podczas skanowania."
+
+#. module: cyfr_quote_watchlist
+#. odoo-python
+#: code:addons/cyfr_quote_watchlist/models/quote_watchlist.py:0
+msgid "Watchlist rows are read-only."
+msgstr "Wiersze listy są tylko do odczytu."
+
+#. module: cyfr_quote_watchlist
+#. odoo-python
+#: code:addons/cyfr_quote_watchlist/models/quote_watchlist.py:0
+msgid "Watchlist rows are removed only by a scan or expiration."
+msgstr "Wiersze listy są usuwane tylko podczas skanowania lub po wygaśnięciu."
+
+#. module: cyfr_quote_watchlist
+#: model:ir.model.fields,field_description:cyfr_quote_watchlist.field_cyfr_quote_watchlist_line__worklist_id
+msgid "Worklist"
+msgstr "Lista"

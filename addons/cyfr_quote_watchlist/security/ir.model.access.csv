@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_quote_watchlist_setting_user,quote watchlist setting sales user,model_cyfr_quote_watchlist_setting,sales_team.group_sale_salesman,1,0,0,0
+access_quote_watchlist_setting_manager,quote watchlist setting sales manager,model_cyfr_quote_watchlist_setting,sales_team.group_sale_manager,1,1,1,1
+access_quote_watchlist_user,quote watchlist sales user,model_cyfr_quote_watchlist,sales_team.group_sale_salesman,1,1,1,1
+access_quote_watchlist_line_user,quote watchlist line sales user,model_cyfr_quote_watchlist_line,sales_team.group_sale_salesman,1,0,0,0

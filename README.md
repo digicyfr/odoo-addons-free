@@ -12,6 +12,7 @@ license copy, English and Polish guides, demo data, and tests.
 | [`cyfr_stock_exception_queue`](addons/cyfr_stock_exception_queue/README.md) | Review negative, below-minimum, and persistently unavailable stock in a bounded advisory queue | `stock` |
 | [`cyfr_purchase_receipt_delays`](addons/cyfr_purchase_receipt_delays/README.md) | Review late or soon-due open physical purchase receipts and schedule follow-up activities | `purchase_stock` |
 | [`cyfr_website_language_audit`](addons/cyfr_website_language_audit/README.md) | Review static multilingual page content, missing localized SEO fields, and image descriptions | `website` |
+| [`cyfr_quote_watchlist`](addons/cyfr_quote_watchlist/README.md) | Review draft and sent quotations by expiry and missing future activity without sending customer messages | `sale_management` |
 
 ## Install
 

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_quote_watchlist_form" model="ir.ui.view">
+        <field name="name">cyfr.quote.watchlist.form</field>
+        <field name="model">cyfr.quote.watchlist</field>
+        <field name="arch" type="xml">
+            <form string="Quote Watchlist" duplicate="false">
+                <header>
+                    <button name="action_scan" type="object" string="Scan Quotations" class="btn-primary"/>
+                    <button name="action_open_results" type="object" string="View Last Scan" invisible="not scanned_at"/>
+                </header>
+                <sheet>
+                    <div class="oe_title"><h1>Quote Watchlist</h1></div>
+                    <div class="alert alert-info" role="alert">
+                        Review draft and sent quotations manually. An activity due today or overdue is not a future follow-up. Scanning does not change quotations or send customer messages.
+                    </div>
+                    <group>
+                        <group>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                            <field name="company_id" invisible="1" groups="!base.group_multi_company"/>
+                            <field name="salesperson_id"/>
+                            <field name="team_id"/>
+                            <field name="valid_from"/>
+                            <field name="valid_to"/>
+                        </group>
+                        <group>
+                            <field name="horizon_days"/>
+                            <field name="scanned_at"/>
+                            <field name="candidate_count"/>
+                            <field name="result_count"/>
+                        </group>
+                    </group>
+                    <div class="alert alert-warning" role="alert" invisible="not truncated">
+                        The scan reached its safety limit. Narrow company, salesperson, team or validity dates and scan again.
+                    </div>
+                    <field name="truncated" invisible="1"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_quote_watchlist_line_list" model="ir.ui.view">
+        <field name="name">cyfr.quote.watchlist.line.list</field>
+        <field name="model">cyfr.quote.watchlist.line</field>
+        <field name="arch" type="xml">
+            <list string="Quote Watchlist" create="false" edit="false" delete="false">
+                <field name="reason_code" decoration-danger="reason_code == 'expired'" decoration-warning="reason_code == 'soon'"/>
+                <field name="order_id"/>
+                <field name="partner_id"/>
+                <field name="salesperson_id"/>
+                <field name="team_id" optional="hide"/>
+                <field name="company_id" groups="base.group_multi_company" optional="hide"/>
+                <field name="validity_date" string="Valid until"/>
+                <field name="next_activity_date" string="Next activity"/>
+                <field name="missing_future_activity" string="No future"/>
+                <field name="has_overdue_activity" optional="hide"/>
+                <field name="has_due_today_activity" optional="hide"/>
+                <button name="action_open_quote" type="object" string="Open Quote" icon="fa-external-link"/>
+                <button name="action_schedule_activity" type="object" string="Schedule Follow-up" icon="fa-calendar-plus-o"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_quote_watchlist_line_form" model="ir.ui.view">
+        <field name="name">cyfr.quote.watchlist.line.form</field>
+        <field name="model">cyfr.quote.watchlist.line</field>
+        <field name="arch" type="xml">
+            <form string="Quote Watchlist Row" create="false" edit="false" delete="false">
+                <header>
+                    <button name="action_open_quote" type="object" string="Open Quote" class="btn-primary"/>
+                    <button name="action_schedule_activity" type="object" string="Schedule Follow-up"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="reason_code"/>
+                            <field name="expiry_status"/>
+                            <field name="order_id"/>
+                            <field name="partner_id"/>
+                            <field name="validity_date"/>
+                        </group>
+                        <group>
+                            <field name="salesperson_id"/>
+                            <field name="team_id"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                            <field name="next_activity_date"/>
+                            <field name="missing_future_activity"/>
+                            <field name="has_overdue_activity"/>
+                            <field name="has_due_today_activity"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_quote_watchlist_line_search" model="ir.ui.view">
+        <field name="name">cyfr.quote.watchlist.line.search</field>
+        <field name="model">cyfr.quote.watchlist.line</field>
+        <field name="arch" type="xml">
+            <search string="Quote Watchlist">
+                <field name="order_id"/>
+                <field name="partner_id"/>
+                <field name="salesperson_id"/>
+                <field name="team_id"/>
+                <field name="company_id"/>
+                <field name="validity_date"/>
+                <filter name="expired" string="Expired" domain="[('reason_code','=','expired')]"/>
+                <filter name="soon" string="Expiring Soon" domain="[('reason_code','=','soon')]"/>
+                <filter name="missing_date" string="Validity Date Missing" domain="[('reason_code','=','missing')]"/>
+                <filter name="missing_future" string="No Future Activity" domain="[('missing_future_activity','=',True)]"/>
+                <group>
+                    <filter name="group_owner" string="Salesperson" context="{'group_by':'salesperson_id'}"/>
+                    <filter name="group_team" string="Sales Team" context="{'group_by':'team_id'}"/>
+                    <filter name="group_company" string="Company" context="{'group_by':'company_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_quote_watchlist_setting_list" model="ir.ui.view">
+        <field name="name">cyfr.quote.watchlist.setting.list</field>
+        <field name="model">cyfr.quote.watchlist.setting</field>
+        <field name="arch" type="xml">
+            <list string="Quote Watchlist Settings" create="true" edit="true" delete="true">
+                <field name="company_id"/>
+                <field name="horizon_days"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_quote_watchlist_setting_form" model="ir.ui.view">
+        <field name="name">cyfr.quote.watchlist.setting.form</field>
+        <field name="model">cyfr.quote.watchlist.setting</field>
+        <field name="arch" type="xml">
+            <form string="Quote Watchlist Setting">
+                <sheet><group><field name="company_id"/><field name="horizon_days"/></group></sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_quote_watchlist" model="ir.actions.act_window">
+        <field name="name">Quote Watchlist</field>
+        <field name="res_model">cyfr.quote.watchlist</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_quote_watchlist_form"/>
+    </record>
+    <record id="action_quote_watchlist_settings" model="ir.actions.act_window">
+        <field name="name">Quote Watchlist Settings</field>
+        <field name="res_model">cyfr.quote.watchlist.setting</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <menuitem id="menu_quote_watchlist" name="Quote Watchlist" parent="sale.sale_order_menu"
+              action="action_quote_watchlist" groups="sales_team.group_sale_salesman" sequence="15"/>
+    <menuitem id="menu_quote_watchlist_settings" name="Quote Watchlist Horizon"
+              parent="sale.menu_sale_config" action="action_quote_watchlist_settings"
+              groups="sales_team.group_sale_manager" sequence="15"/>
+</odoo>

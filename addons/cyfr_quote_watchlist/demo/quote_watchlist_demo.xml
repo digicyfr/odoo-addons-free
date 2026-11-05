@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="demo_customer" model="res.partner">
+        <field name="name">Quote Watchlist Sample Customer</field>
+    </record>
+    <record id="demo_second_company" model="res.company">
+        <field name="name">Quote Watchlist Sample Second Company</field>
+    </record>
+    <record id="demo_expiring" model="sale.order">
+        <field name="partner_id" ref="demo_customer"/>
+        <field name="validity_date" eval="(datetime.now() + timedelta(days=2)).date().isoformat()"/>
+    </record>
+    <record id="demo_expired" model="sale.order">
+        <field name="partner_id" ref="demo_customer"/>
+        <field name="validity_date" eval="(datetime.now() - timedelta(days=2)).date().isoformat()"/>
+    </record>
+    <record id="demo_no_activity" model="sale.order">
+        <field name="partner_id" ref="demo_customer"/>
+        <field name="validity_date" eval="(datetime.now() + timedelta(days=30)).date().isoformat()"/>
+    </record>
+    <record id="demo_only_overdue" model="sale.order">
+        <field name="partner_id" ref="demo_customer"/>
+        <field name="validity_date" eval="(datetime.now() + timedelta(days=30)).date().isoformat()"/>
+    </record>
+    <record id="demo_future" model="sale.order">
+        <field name="partner_id" ref="demo_customer"/>
+        <field name="validity_date" eval="(datetime.now() + timedelta(days=30)).date().isoformat()"/>
+    </record>
+    <record id="demo_missing_date" model="sale.order">
+        <field name="partner_id" ref="demo_customer"/>
+        <field name="validity_date" eval="False"/>
+    </record>
+    <record id="demo_confirmed" model="sale.order">
+        <field name="partner_id" ref="demo_customer"/>
+        <field name="state">sale</field>
+    </record>
+    <record id="demo_cancelled" model="sale.order">
+        <field name="partner_id" ref="demo_customer"/>
+        <field name="state">cancel</field>
+    </record>
+    <record id="demo_second_company_quote" model="sale.order">
+        <field name="partner_id" ref="demo_customer"/>
+        <field name="company_id" ref="demo_second_company"/>
+        <field name="validity_date" eval="(datetime.now() + timedelta(days=2)).date().isoformat()"/>
+    </record>
+    <record id="demo_overdue_activity" model="mail.activity">
+        <field name="res_model_id" ref="sale.model_sale_order"/>
+        <field name="res_id" eval="ref('demo_only_overdue')"/>
+        <field name="activity_type_id" ref="mail.mail_activity_data_todo"/>
+        <field name="user_id" ref="base.user_admin"/>
+        <field name="date_deadline" eval="(datetime.now() - timedelta(days=1)).date().isoformat()"/>
+        <field name="summary">Sample overdue follow-up</field>
+    </record>
+    <record id="demo_future_activity" model="mail.activity">
+        <field name="res_model_id" ref="sale.model_sale_order"/>
+        <field name="res_id" eval="ref('demo_future')"/>
+        <field name="activity_type_id" ref="mail.mail_activity_data_todo"/>
+        <field name="user_id" ref="base.user_admin"/>
+        <field name="date_deadline" eval="(datetime.now() + timedelta(days=3)).date().isoformat()"/>
+        <field name="summary">Sample planned follow-up</field>
+    </record>
+</odoo>

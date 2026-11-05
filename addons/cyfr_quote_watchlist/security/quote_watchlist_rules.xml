@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="rule_quote_watchlist_setting_company" model="ir.rule">
+        <field name="name">Quote watchlist setting: allowed company</field>
+        <field name="model_id" ref="model_cyfr_quote_watchlist_setting"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+    </record>
+    <record id="rule_quote_watchlist_owner_company" model="ir.rule">
+        <field name="name">Quote watchlist: owner and allowed company</field>
+        <field name="model_id" ref="model_cyfr_quote_watchlist"/>
+        <field name="domain_force">[('scan_owner_id', '=', user.id), ('company_id', 'in', company_ids)]</field>
+    </record>
+    <record id="rule_quote_watchlist_line_owner_company" model="ir.rule">
+        <field name="name">Quote watchlist row: owner and allowed company</field>
+        <field name="model_id" ref="model_cyfr_quote_watchlist_line"/>
+        <field name="domain_force">[('scan_owner_id', '=', user.id), ('company_id', 'in', company_ids)]</field>
+    </record>
+</odoo>
